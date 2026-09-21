@@ -1,6 +1,6 @@
 {
-  "name": "QRBox",
-  "short_name": "QRBox",
+  "name": "QRBox Studio",
+  "short_name": "QRBox Studio",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#090d16",

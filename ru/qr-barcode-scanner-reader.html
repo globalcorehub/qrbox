@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ru-RU" class="scroll-smooth" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Онлайн сканер QR и штрихкодов - Распознавание через веб-камеру и по фото | QRBox Studio</title>
+  <meta name="description" content="Считывайте QR-коды и штрихкоды онлайн через веб-камеру компьютера или загружая скриншоты и фотографии. Быстро, бесплатно и без установки программ.">
+  
+  <!-- Dynamic Zero-Dependency SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23fef08a' stroke='%23000' stroke-width='8'/><text x='50%' y='68%' font-size='60' font-weight='900' font-family='sans-serif' text-anchor='middle' fill='%23000'>⚡</text></svg>">
+  <link rel="canonical" href="https://qrbox.globalcorehub.com/ru/qr-barcode-scanner-reader">
+  <link rel="alternate" hreflang="en" href="https://qrbox.globalcorehub.com/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="zh-CN" href="https://qrbox.globalcorehub.com/zh/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="zh" href="https://qrbox.globalcorehub.com/zh/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="es" href="https://qrbox.globalcorehub.com/es/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="pt" href="https://qrbox.globalcorehub.com/pt/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="de" href="https://qrbox.globalcorehub.com/de/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="fr" href="https://qrbox.globalcorehub.com/fr/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="ja" href="https://qrbox.globalcorehub.com/ja/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="ko-KR" href="https://qrbox.globalcorehub.com/ko/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="it-IT" href="https://qrbox.globalcorehub.com/it/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="ru-RU" href="https://qrbox.globalcorehub.com/ru/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="ar-SA" href="https://qrbox.globalcorehub.com/ar/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="id-ID" href="https://qrbox.globalcorehub.com/id/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="vi-VN" href="https://qrbox.globalcorehub.com/vi/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="tr-TR" href="https://qrbox.globalcorehub.com/tr/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="th-TH" href="https://qrbox.globalcorehub.com/th/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="hi-IN" href="https://qrbox.globalcorehub.com/hi/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="nl-NL" href="https://qrbox.globalcorehub.com/nl/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="pl-PL" href="https://qrbox.globalcorehub.com/pl/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="sv-SE" href="https://qrbox.globalcorehub.com/sv/qr-barcode-scanner-reader" />
+  <link rel="alternate" hreflang="x-default" href="https://qrbox.globalcorehub.com/qr-barcode-scanner-reader" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Онлайн сканер QR и штрихкодов - Распознавание через веб-камеру и по фото | QRBox Studio">
+  <meta property="og:description" content="Считывайте QR-коды и штрихкоды онлайн через веб-камеру компьютера или загружая скриншоты и фотографии. Быстро, бесплатно и без установки программ.">
+  <meta property="og:url" content="https://qrbox.globalcorehub.com/ru/qr-barcode-scanner-reader">
+  <meta property="og:site_name" content="QRBox Studio">
+  <meta property="og:image" content="https://qrbox.globalcorehub.com/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Онлайн сканер QR и штрихкодов - Распознавание через веб-камеру и по фото | QRBox Studio">
+  <meta name="twitter:description" content="Считывайте QR-коды и штрихкоды онлайн через веб-камеру компьютера или загружая скриншоты и фотографии. Быстро, бесплатно и без установки программ.">
+  <meta name="twitter:image" content="https://qrbox.globalcorehub.com/og-image.svg">
+
+  <!-- Neo-Brutalist Typography (Space Grotesk & Lexend) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Framework -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Space Grotesk', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace']
+          },
+          colors: {
+            pop: {
+              yellow: '#fef08a',
+              pink: '#f472b6',
+              green: '#86efac',
+              cyan: '#7dd3fc',
+              purple: '#c084fc',
+              orange: '#fdba74'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Neo-Brutalism Design System CSS Stylesheet -->
+  <style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #fefce8;
+      color: #000000;
+      letter-spacing: -0.015em;
+    }
+    .dark body {
+      background-color: #18181b;
+      color: #fafafa;
+    }
+    .nb-box {
+      border: 3px solid #000000;
+      box-shadow: 4px 4px 0px #000000;
+      background-color: #ffffff;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dark .nb-box {
+      border: 3px solid #ffffff;
+      box-shadow: 4px 4px 0px #ffffff;
+      background-color: #27272a;
+    }
+    .nb-btn {
+      border: 3px solid #000000;
+      box-shadow: 4px 4px 0px #000000;
+      font-weight: 800;
+      transition: all 0.12s ease-in-out;
+      cursor: pointer;
+    }
+    .dark .nb-btn {
+      border: 3px solid #ffffff;
+      box-shadow: 4px 4px 0px #ffffff;
+    }
+    .nb-btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 5px 5px 0px #000000;
+    }
+    .dark .nb-btn:hover {
+      box-shadow: 5px 5px 0px #ffffff;
+    }
+    .nb-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px #000000;
+    }
+    .dark .nb-btn:active {
+      box-shadow: 1px 1px 0px #ffffff;
+    }
+    .nb-tag {
+      border: 2px solid #000000;
+      box-shadow: 2px 2px 0px #000000;
+      font-weight: 700;
+    }
+    .dark .nb-tag {
+      border: 2px solid #ffffff;
+      box-shadow: 2px 2px 0px #ffffff;
+    }
+    #tool-search, #search-section, [data-search-target] {
+      scroll-margin-top: 130px;
+    }
+    @keyframes search-glow-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .search-highlight-pulse {
+      animation: search-glow-pulse 0.4s ease-in-out 2;
+      box-shadow: 0 0 0 4px #f59e0b !important;
+      border-color: #f59e0b !important;
+    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #fefce8; border-left: 2px solid #000; }
+    ::-webkit-scrollbar-thumb { background: #000; }
+  </style>
+
+  <!-- Structured Data JSON-LD (WebSite & SearchAction) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "QRBox Studio",
+    "url": "https://qrbox.globalcorehub.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://qrbox.globalcorehub.com/?q={search_term_string}#tool-search",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Structured Data JSON-LD (WebApplication) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Онлайн сканер QR и штрихкодов - Распознавание через веб-камеру и по фото",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "url": "https://qrbox.globalcorehub.com/ru/qr-barcode-scanner-reader",
+    "description": "Считывайте QR-коды и штрихкоды онлайн через веб-камеру компьютера или загружая скриншоты и фотографии. Быстро, бесплатно и без установки программ.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  
+  <!-- Semantic BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Главная",
+        "item": "https://qrbox.globalcorehub.com/ru/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Все Инструменты",
+        "item": "https://qrbox.globalcorehub.com/ru/#tools-grid"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Онлайн сканер QR и штрихкодов - Распознавание через веб-камеру и по фото",
+        "item": "https://qrbox.globalcorehub.com/ru/qr-barcode-scanner-reader"
+      }
+    ]
+  }
+  </script>
+  
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-yellow-300 selection:text-black">
+
+  <!-- Top Marquee Ticker -->
+  <div class="bg-black text-yellow-300 border-b-2 border-black py-1.5 px-4 text-xs font-mono font-bold overflow-hidden">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-300 animate-ping mr-1"></span>
+        <span class="tracking-wider uppercase">TACTILE NEO-BRUTALIST WORKSPACE</span>
+        <span class="hidden md:inline text-neutral-500">•</span>
+        <span class="hidden md:inline text-neutral-300">100% In-Browser Zero-Server Execution</span>
+      </div>
+      <div class="text-[11px] font-bold text-neutral-400">
+        100% Локально
+      </div>
+    </div>
+  </div>
+
+  <!-- Neo-Brutalist High-Contrast Header -->
+  <header class="sticky top-0 z-40 w-full bg-white dark:bg-zinc-900 border-b-[3px] border-black dark:border-white shadow-[0_4px_0px_#000]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Brand Identity -->
+        <a href="/ru/" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-yellow-300 border-2 border-black flex items-center justify-center shadow-[3px_3px_0px_#000] group-hover:rotate-6 transition-transform">
+            <span class="font-black text-xl text-black">⚡</span>
+          </div>
+          <div>
+            <span class="font-black text-lg sm:text-xl tracking-tight text-black dark:text-white uppercase">QRBox Studio</span>
+            <span class="block text-[10px] font-mono font-bold text-neutral-500 uppercase">Interactive Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav class="hidden md:flex items-center space-x-2 text-xs font-bold uppercase">
+          <a href="/ru/" class="px-3.5 py-2 rounded-lg border-2 border-black shadow-[2px_2px_0px_#000] transition bg-white hover:bg-neutral-100 text-black">
+            Главная
+          </a>
+
+          
+          <a href="/ru/url-qr-code-generator" title="Генератор QR-кодов ссылок - Свой логотип, цвета и экспорт векторного SVG" class="px-3.5 py-2 rounded-lg border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[2px_2px_0px_#000] transition truncate max-w-[170px]">
+            QR-код Ссылки
+          </a>
+          
+          <a href="/ru/wifi-qr-code-generator" title="Генератор QR-кода WiFi - Быстрое подключение без ввода пароля и печать табличек" class="px-3.5 py-2 rounded-lg border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[2px_2px_0px_#000] transition truncate max-w-[170px]">
+            WiFi QR-код
+          </a>
+          
+
+          
+          <a href="https://dischargeconceiteffort.com/bs4tah5fhz?key=f031a850339a5c91e7f30d97af3de3b2" target="_blank" rel="sponsored noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1 px-3 py-2 rounded-lg border-2 border-black bg-[#fef08a] hover:bg-[#fde047] text-black shadow-[2px_2px_0px_#000] transition font-bold text-xs" title="Ресурсы Pro">
+            <span>⚡ Ресурсы Pro</span>
+            <span>↗</span>
+          </a>
+          
+
+          <!-- All Tools Dropdown -->
+          <div class="relative" id="tools-dropdown-container">
+            <button id="tools-dropdown-btn" type="button" class="px-3.5 py-2 rounded-lg border-2 border-black bg-pop-cyan text-black shadow-[2px_2px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition flex items-center space-x-1 font-bold">
+              <span>Все Инструменты</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="tools-dropdown-panel" class="hidden absolute right-0 mt-2 w-80 rounded-xl bg-white border-[3px] border-black shadow-[6px_6px_0px_#000] p-2.5 z-50">
+              <div class="text-[10px] font-mono text-neutral-500 px-3 py-1.5 uppercase font-bold border-b-2 border-black mb-1.5 flex justify-between">
+                <span>Все Инструменты</span>
+                <span>8 UNITS</span>
+              </div>
+              <div class="max-h-80 overflow-y-auto space-y-1">
+                
+                <a href="/ru/url-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">QR-код Ссылки</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Создавайте QR-коды для сайтов с собственным логотипом, градиентами и скачиванием SVG/PNG высокого разрешения. Без водяных знаков и серверов.</div>
+                </a>
+                
+                <a href="/ru/wifi-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">WiFi QR-код</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Создайте QR-код для подключения к сети Wi-Fi в кафе, офисе или дома. Сканирование камерой телефона мгновенно подключает к интернету без ввода пароля.</div>
+                </a>
+                
+                <a href="/ru/vcard-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">Визитка vCard</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Создайте электронную визитку vCard для мгновенного сохранения контактов в телефонную книгу смартфона при сканировании. Экспорт файлов .VCF.</div>
+                </a>
+                
+                <a href="/ru/barcode-generator-code128" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">Штрихкод Code 128</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Генератор промышленных штрихкодов Code 128 для маркировки товаров, складского учета и логистических наклеек. Векторный экспорт в SVG для принтеров этикеток.</div>
+                </a>
+                
+                <a href="/ru/ean-upc-barcode-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">EAN-13 Товарный</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Генератор товарных штрихкодов для розничной торговли, маркетплейсов и книг (ISBN). Автоматический расчет 13-й контрольной цифры по алгоритму Modulo 10.</div>
+                </a>
+                
+                <a href="/ru/whatsapp-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">WhatsApp QR-код</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Генератор QR-кода для прямого диалога в WhatsApp без сохранения телефонного номера. Поддержка готовых шаблонов приветственных сообщений.</div>
+                </a>
+                
+                <a href="/ru/crypto-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">Крипто QR-код</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Создавайте надежные QR-коды для приема платежей и донатов в криптовалюте (Bitcoin, Ethereum, USDT) по протоколам BIP-21 и ERC-681 без утечки ключей.</div>
+                </a>
+                
+                <a href="/ru/qr-barcode-scanner-reader" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">QR Сканер</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Считывайте QR-коды и штрихкоды онлайн через веб-камеру компьютера или загружая скриншоты и фотографии. Быстро, бесплатно и без установки программ.</div>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side: Search, Lang & Mobile Menu -->
+        <div class="flex items-center space-x-2">
+          <!-- Top Nav Search Button -->
+          <a href="/ru/?focus_search=1#tool-search" id="nav-search-btn" class="p-2 rounded-lg border-2 border-black bg-pop-pink text-black shadow-[2px_2px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition cursor-pointer" title="Search Tools (Ctrl+K)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </a>
+
+          <!-- Language Selector Details -->
+          <details class="relative">
+            <summary class="list-none cursor-pointer px-3 py-1.5 rounded-lg border-2 border-black bg-pop-green text-black shadow-[2px_2px_0px_#000] text-xs font-mono font-bold flex items-center space-x-1 transition">
+              <span>[RU]</span>
+              <span class="hidden sm:inline">RU</span>
+            </summary>
+            <div class="absolute right-0 mt-2 w-44 rounded-xl bg-white border-[3px] border-black shadow-[5px_5px_0px_#000] p-1.5 z-50 text-xs font-bold space-y-0.5">
+              
+              <a href="/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[EN] English</span>
+                
+              </a>
+              
+              <a href="/zh/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[ZH] 简体中文</span>
+                
+              </a>
+              
+              <a href="/es/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[ES] Español</span>
+                
+              </a>
+              
+              <a href="/pt/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[PT] Português</span>
+                
+              </a>
+              
+              <a href="/de/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[DE] Deutsch</span>
+                
+              </a>
+              
+              <a href="/fr/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[FR] Français</span>
+                
+              </a>
+              
+              <a href="/ja/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[JA] 日本語</span>
+                
+              </a>
+              
+              <a href="/ko/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[KO] 한국어</span>
+                
+              </a>
+              
+              <a href="/it/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[IT] Italiano</span>
+                
+              </a>
+              
+              <a href="/ru/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black bg-yellow-300 border border-black">
+                <span>[RU] Русский</span>
+                <span>✓</span>
+              </a>
+              
+              <a href="/ar/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[AR] العربية</span>
+                
+              </a>
+              
+              <a href="/id/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[ID] Bahasa Indonesia</span>
+                
+              </a>
+              
+              <a href="/vi/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[VI] Tiếng Việt</span>
+                
+              </a>
+              
+              <a href="/tr/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[TR] Türkçe</span>
+                
+              </a>
+              
+              <a href="/th/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[TH] ภาษาไทย</span>
+                
+              </a>
+              
+              <a href="/hi/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[HI] हिन्दी</span>
+                
+              </a>
+              
+              <a href="/nl/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[NL] Nederlands</span>
+                
+              </a>
+              
+              <a href="/pl/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[PL] Polski</span>
+                
+              </a>
+              
+              <a href="/sv/qr-barcode-scanner-reader" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[SV] Svenska</span>
+                
+              </a>
+              
+            </div>
+          </details>
+
+          <!-- Mobile Menu Hamburger -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border-2 border-black bg-white shadow-[2px_2px_0px_#000] text-black transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t-[3px] border-black bg-yellow-50 px-4 pt-3 pb-6 space-y-2.5">
+      
+      <a href="https://dischargeconceiteffort.com/bs4tah5fhz?key=f031a850339a5c91e7f30d97af3de3b2" target="_blank" rel="sponsored noopener noreferrer" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl border-2 border-black bg-amber-300 text-xs font-bold text-black shadow-[3px_3px_0px_#000]">
+        <span>⚡ Ресурсы Pro</span>
+        <span>↗</span>
+      </a>
+      
+      <a href="/ru/?focus_search=1#tool-search" class="mobile-search-link flex items-center justify-between px-3.5 py-2.5 rounded-xl border-2 border-black bg-white shadow-[3px_3px_0px_#000] text-xs font-mono font-bold text-black">
+        <span class="flex items-center space-x-2">
+          <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <span>Поиск инструментов... (Нажмите /)</span>
+        </span>
+        <kbd class="text-[10px] px-1.5 py-0.5 rounded border-2 border-black bg-yellow-300 font-mono">/</kbd>
+      </a>
+      <a href="/ru/" class="block px-3.5 py-2 rounded-xl border-2 border-black font-black text-sm bg-white text-black">
+        Главная
+      </a>
+      
+      <a href="/ru/url-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        QR-код Ссылки
+      </a>
+      
+      <a href="/ru/wifi-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        WiFi QR-код
+      </a>
+      
+      <a href="/ru/vcard-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        Визитка vCard
+      </a>
+      
+      <a href="/ru/barcode-generator-code128" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        Штрихкод Code 128
+      </a>
+      
+      <a href="/ru/ean-upc-barcode-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        EAN-13 Товарный
+      </a>
+      
+      <a href="/ru/whatsapp-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        WhatsApp QR-код
+      </a>
+      
+      <a href="/ru/crypto-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        Крипто QR-код
+      </a>
+      
+      <a href="/ru/qr-barcode-scanner-reader" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        QR Сканер
+      </a>
+      
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow w-full py-6 sm:py-10">
+    
+    <!-- Semantic Breadcrumbs for Subpages -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+      <nav aria-label="Breadcrumb" class="inline-flex items-center space-x-2 text-xs font-mono font-bold border-2 border-black bg-white px-4 py-2 rounded-xl shadow-[3px_3px_0px_#000]">
+        <a href="/ru/" class="hover:underline flex items-center space-x-1 text-black">
+          <span>Главная</span>
+        </a>
+        <span>/</span>
+        <a href="/ru/#tools-grid" class="hover:underline text-neutral-600">Все Инструменты</a>
+        <span>/</span>
+        <span class="text-black uppercase truncate max-w-xs">QR Сканер</span>
+      </nav>
+    </div>
+    
+
+    
+<div class="max-w-5xl mx-auto">
+  <div class="bg-white rounded-2xl border-[3px] border-black shadow-[6px_6px_0px_#000] p-4 sm:p-6 md:p-8">
+    <div class="border-b-[3px] border-black pb-5">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-[#f472b6] border-2 border-black text-xs font-mono font-black mb-2 shadow-[2px_2px_0px_#000]">
+        <span>📷 IN-BROWSER SCANNER & DECODER ENGINE</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Онлайн сканер QR и штрихкодов - Распознавание через веб-камеру и по фото</h1>
+      <p class="text-xs sm:text-sm font-bold text-neutral-700 mt-1 max-w-2xl">Считывайте QR-коды и штрихкоды онлайн через веб-камеру компьютера или загружая скриншоты и фотографии. Быстро, бесплатно и без установки программ.</p>
+    </div>
+
+    <!-- Mode Tabs -->
+    <div class="mt-6 flex border-b-2 border-black font-mono text-xs font-black">
+      <button type="button" id="tab-btn-cam" class="px-4 py-2.5 border-t-2 border-x-2 border-black bg-[#fef08a] shadow-[2px_-2px_0px_#000] -mb-[2px]">Сканер через Веб-камеру</button>
+      <button type="button" id="tab-btn-img" class="px-4 py-2.5 border-t-2 border-x-2 border-black bg-white opacity-60 hover:opacity-100">Загрузить и Сканировать Фото</button>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <!-- Left: Camera Viewfinder or Dropzone -->
+      <div class="lg:col-span-7">
+        <!-- Camera Panel -->
+        <div id="panel-camera" class="space-y-4">
+          <div class="relative w-full aspect-video bg-black border-[3px] border-black shadow-[4px_4px_0px_#000] rounded-xl overflow-hidden flex items-center justify-center">
+            <video id="scan-video" playsinline class="w-full h-full object-cover hidden"></video>
+            <div id="cam-placeholder" class="text-center p-6 text-white font-mono">
+              <div class="text-4xl mb-2">📹</div>
+              <p class="text-xs font-bold opacity-80">Camera stream is inactive</p>
+            </div>
+            <!-- Viewfinder Laser Overlay -->
+            <div id="cam-laser" class="hidden absolute inset-x-8 top-1/2 h-0.5 bg-red-500 shadow-[0_0_8px_#ef4444] animate-pulse"></div>
+          </div>
+
+          <div class="flex items-center space-x-3">
+            <button type="button" id="btn-start-cam" class="px-4 py-2.5 bg-[#86efac] border-2 border-black font-mono font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-[#4ade80] active:translate-x-0.5 active:translate-y-0.5 transition">
+              ▶ Включить Камеру
+            </button>
+            <button type="button" id="btn-stop-cam" disabled class="px-4 py-2.5 bg-neutral-200 border-2 border-black font-mono font-black text-xs shadow-[2px_2px_0px_#000] disabled:opacity-40 transition">
+              ⏹ Выключить Камеру
+            </button>
+          </div>
+        </div>
+
+        <!-- Image Upload Panel -->
+        <div id="panel-image" class="hidden space-y-4">
+          <div id="scan-dropzone" class="border-2 border-dashed border-black bg-[#fef08a]/20 hover:bg-[#fef08a]/40 rounded-2xl p-8 text-center cursor-pointer transition font-mono">
+            <input type="file" id="scan-file-inp" accept="image/*" class="hidden">
+            <div class="text-4xl mb-2">🖼️</div>
+            <p class="text-xs sm:text-sm font-black text-black">Нажмите или перетащите изображение QR или штрихкода (.png, .jpg, .webp)</p>
+            <p class="text-[11px] text-neutral-600 mt-1">100% Client-Side Decoded • Zero Server Upload</p>
+          </div>
+          <div id="img-preview-container" class="hidden text-center">
+            <img id="scan-preview-img" class="max-h-48 max-w-full inline-block border-2 border-black rounded shadow-[2px_2px_0px_#000]">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Decoded Output Box -->
+      <div class="lg:col-span-5">
+        <div class="p-5 bg-[#fef08a] border-[3px] border-black shadow-[5px_5px_0px_#000] rounded-2xl font-mono">
+          <div class="flex items-center justify-between border-b-2 border-black pb-2 mb-3">
+            <span class="text-xs font-black text-black uppercase">Результат Расшифровки:</span>
+            <span id="scan-detected-fmt" class="text-[10px] font-black px-2 py-0.5 bg-black text-white">READY</span>
+          </div>
+
+          <div id="scan-result-box" class="min-h-[120px] p-3 bg-white border-2 border-black font-mono text-xs font-bold break-all select-all text-neutral-800">
+            Scanning for barcodes...
+          </div>
+
+          <div class="mt-4 flex flex-col space-y-2">
+            <button type="button" id="btn-copy-scan" class="w-full py-2 bg-white border-2 border-black font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-neutral-100 transition">
+              Копировать Содержимое
+            </button>
+            <a id="btn-open-scan-url" href="#" target="_blank" rel="noopener noreferrer" class="hidden w-full py-2 bg-[#67e8f9] border-2 border-black text-center font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-[#22d3ee] transition">
+              Перейти по ссылке ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+        <!-- Rule 9 Contextual Partner Solution Trigger Banner -->
+        <div class="mt-8 mb-6 p-4 rounded-xl border-[3px] border-black bg-[#fef08a] shadow-[4px_4px_0px_#000]">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div class="flex items-center space-x-2.5">
+              <span class="w-3 h-3 bg-[#f472b6] border-2 border-black inline-block animate-pulse"></span>
+              <span class="text-xs font-black font-mono uppercase tracking-wider text-black">SPONSORED RECOMMENDATION</span>
+              <span class="text-xs font-bold text-neutral-800">Enterprise Cloud QR & Barcode Asset Management Suite</span>
+            </div>
+            <a href="https://dischargeconceiteffort.com/bs4tah5fhz?key=f031a850339a5c91e7f30d97af3de3b2" target="_blank" rel="sponsored noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border-2 border-black bg-black text-white hover:bg-neutral-800 text-xs font-mono font-black shadow-[2px_2px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition flex items-center space-x-1 flex-shrink-0">
+              <span>⚡ Рекомендуемое Решение Партнера ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- SEO & Architecture Explanations -->
+        <div class="mt-8 pt-6 border-t-[3px] border-black grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
+          <div>
+            <h2 class="text-sm sm:text-base font-black uppercase font-mono tracking-wider mb-2">О сервисе Онлайн сканер QR и штрихкодов - Распознавание через веб-камеру и по фото</h2>
+            <p class="text-xs leading-relaxed font-medium mb-4">Онлайн-инструмент в браузере с нулевой задержкой для <strong>онлайн сканер qr кода</strong>. Все расчеты матрицы QR и штрихкодов выполняются в памяти вашего устройства.</p>
+            <h3 class="text-xs font-black uppercase font-mono tracking-wider opacity-80 mb-2">Поддерживаемые Возможности и Форматы</h3>
+            <ul class="space-y-0.5"><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>онлайн сканер qr кода</li><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>считать qr код с картинки</li><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>сканировать qr код через веб камеру</li><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>распознать штрихкод по фото</li><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>онлайн сканер штрихкодов без программ</li></ul>
+          </div>
+          <div>
+            <h2 class="text-sm sm:text-base font-black uppercase font-mono tracking-wider mb-2">Архитектура и Гарантии Безопасности</h2>
+            <div class="space-y-3">
+              <div class="p-3.5 rounded-xl border-2 border-black bg-[#86efac] shadow-[3px_3px_0px_#000]">
+                <h4 class="text-xs font-black font-mono mb-1">🛡️ 100% Локальная Песочница Приватности</h4>
+                <p class="text-[11px] leading-relaxed font-bold">Ваши пароли Wi-Fi, контакты, телефоны и платежные реквизиты никогда не передаются на сторонние серверы. Ноль логов.</p>
+              </div>
+              <div class="p-3.5 rounded-xl border-2 border-black bg-[#67e8f9] shadow-[3px_3px_0px_#000]">
+                <h4 class="text-xs font-black font-mono mb-1">⚡ Масштабируемый Вектор & Мгновенная Генерация</h4>
+                <p class="text-[11px] leading-relaxed font-bold">Аппаратно ускоренная генерация Canvas 2D и векторного SVG для коммерческой полиграфической печати за доли миллисекунды.</p>
+              </div>
+            </div>
+            <p class="text-[10px] font-mono font-bold mt-4 opacity-75">⚠️ Внимание: Все операции генерации и сканирования выполняются исключительно в памяти браузера без сохранения в облаке.</p>
+          </div>
+        </div>
+        
+  </div>
+</div>
+
+<script>
+(function() {
+  const tabCam = document.getElementById('tab-btn-cam');
+  const tabImg = document.getElementById('tab-btn-img');
+  const panelCam = document.getElementById('panel-camera');
+  const panelImg = document.getElementById('panel-image');
+  const video = document.getElementById('scan-video');
+  const camPlaceholder = document.getElementById('cam-placeholder');
+  const camLaser = document.getElementById('cam-laser');
+  const btnStartCam = document.getElementById('btn-start-cam');
+  const btnStopCam = document.getElementById('btn-stop-cam');
+  const dropzone = document.getElementById('scan-dropzone');
+  const fileInp = document.getElementById('scan-file-inp');
+  const previewImg = document.getElementById('scan-preview-img');
+  const previewContainer = document.getElementById('img-preview-container');
+  const resultBox = document.getElementById('scan-result-box');
+  const fmtBadge = document.getElementById('scan-detected-fmt');
+  const btnCopy = document.getElementById('btn-copy-scan');
+  const btnOpen = document.getElementById('btn-open-scan-url');
+
+  let stream = null;
+  let animId = null;
+  let detector = null;
+
+  if ('BarcodeDetector' in window) {
+    try {
+      detector = new BarcodeDetector({ formats: ['qr_code', 'code_128', 'ean_13', 'ean_8', 'upc_a', 'upc_e'] });
+    } catch(e) {
+      console.warn(e);
+    }
+  }
+
+  // Tab switching
+  tabCam.addEventListener('click', () => {
+    tabCam.className = 'px-4 py-2.5 border-t-2 border-x-2 border-black bg-[#fef08a] shadow-[2px_-2px_0px_#000] -mb-[2px]';
+    tabImg.className = 'px-4 py-2.5 border-t-2 border-x-2 border-black bg-white opacity-60 hover:opacity-100';
+    panelCam.classList.remove('hidden');
+    panelImg.classList.add('hidden');
+  });
+
+  tabImg.addEventListener('click', () => {
+    tabImg.className = 'px-4 py-2.5 border-t-2 border-x-2 border-black bg-[#fef08a] shadow-[2px_-2px_0px_#000] -mb-[2px]';
+    tabCam.className = 'px-4 py-2.5 border-t-2 border-x-2 border-black bg-white opacity-60 hover:opacity-100';
+    panelImg.classList.remove('hidden');
+    panelCam.classList.add('hidden');
+    stopCamera();
+  });
+
+  function displayResult(content, format) {
+    resultBox.textContent = content;
+    fmtBadge.textContent = (format || 'DETECTED').toUpperCase();
+
+    if (/^https?:\/\//i.test(content)) {
+      btnOpen.href = content;
+      btnOpen.classList.remove('hidden');
+    } else {
+      btnOpen.classList.add('hidden');
+    }
+    if (window.showToast) window.showToast('Barcode recognized: ' + content.substring(0, 20));
+  }
+
+  async function startCamera() {
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: 'environment' }
+      });
+      video.srcObject = stream;
+      video.classList.remove('hidden');
+      camPlaceholder.classList.add('hidden');
+      camLaser.classList.remove('hidden');
+      btnStartCam.disabled = true;
+      btnStopCam.disabled = false;
+      await video.play();
+      scanLoop();
+    } catch(err) {
+      alert('Unable to access camera: ' + err.message);
+    }
+  }
+
+  function stopCamera() {
+    if (animId) cancelAnimationFrame(animId);
+    if (stream) {
+      stream.getTracks().forEach(t => t.stop());
+      stream = null;
+    }
+    video.classList.add('hidden');
+    camPlaceholder.classList.remove('hidden');
+    camLaser.classList.add('hidden');
+    btnStartCam.disabled = false;
+    btnStopCam.disabled = true;
+  }
+
+  async function scanLoop() {
+    if (!video.videoWidth) {
+      animId = requestAnimationFrame(scanLoop);
+      return;
+    }
+
+    if (detector) {
+      try {
+        const barcodes = await detector.detect(video);
+        if (barcodes.length > 0) {
+          displayResult(barcodes[0].rawValue, barcodes[0].format);
+        }
+      } catch(e) {}
+    }
+    animId = requestAnimationFrame(scanLoop);
+  }
+
+  btnStartCam.addEventListener('click', startCamera);
+  btnStopCam.addEventListener('click', stopCamera);
+
+  // File Upload Handling
+  dropzone.addEventListener('click', () => fileInp.click());
+  fileInp.addEventListener('change', e => {
+    if (e.target.files && e.target.files[0]) processImage(e.target.files[0]);
+  });
+
+  dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('bg-[#fef08a]'); });
+  dropzone.addEventListener('dragleave', () => dropzone.classList.remove('bg-[#fef08a]'));
+  dropzone.addEventListener('drop', e => {
+    e.preventDefault();
+    dropzone.classList.remove('bg-[#fef08a]');
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) processImage(e.dataTransfer.files[0]);
+  });
+
+  function processImage(file) {
+    const reader = new FileReader();
+    reader.onload = ev => {
+      previewImg.src = ev.target.result;
+      previewContainer.classList.remove('hidden');
+      const img = new Image();
+      img.onload = async () => {
+        if (detector) {
+          try {
+            const barcodes = await detector.detect(img);
+            if (barcodes.length > 0) {
+              displayResult(barcodes[0].rawValue, barcodes[0].format);
+              return;
+            }
+          } catch(e) {}
+        }
+        resultBox.textContent = 'QR-код или штрихкод не обнаружен на изображении. Пожалуйста, загрузите четкое фото.';
+        fmtBadge.textContent = 'NOT FOUND';
+        btnOpen.classList.add('hidden');
+      };
+      img.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  btnCopy.addEventListener('click', () => {
+    const text = resultBox.textContent;
+    if (!text || text.includes('...')) return;
+    navigator.clipboard.writeText(text).then(() => {
+      const prev = btnCopy.textContent;
+      btnCopy.textContent = '✓ Скопировано!';
+      setTimeout(() => { btnCopy.textContent = prev; }, 1500);
+    });
+  });
+})();
+</script>
+        
+
+    
+    <!-- GlobalCoreHub Native Ad Banner (Neo-Brutalism Style) -->
+    <aside class="my-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 font-bold" aria-label="Sponsored Content">
+      <div class="rounded-xl border-[3px] border-black bg-white dark:bg-zinc-900 p-4 sm:p-6 text-center overflow-hidden shadow-[4px_4px_0px_#000]">
+        <div class="text-[10px] uppercase font-mono tracking-widest text-black dark:text-yellow-300 mb-3 flex items-center justify-center space-x-2">
+          <span>⚡</span>
+          <span>СПОНСОРСКИЙ КОНТЕНТ</span>
+          <span>⚡</span>
+        </div>
+        <div id="container-411eda7150daa05047a0b4f542aa62eb" class="min-h-[100px] flex items-center justify-center"></div>
+        <script async="async" data-cfasync="false" src="https://dischargeconceiteffort.com/411eda7150daa05047a0b4f542aa62eb/invoke.js"></script>
+      </div>
+    </aside>
+    
+  </main>
+
+  <!-- Neo-Brutalist High-Impact Footer -->
+  <footer class="mt-auto border-t-[3px] border-black bg-white dark:bg-zinc-900 pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="w-8 h-8 rounded-lg bg-yellow-300 border-2 border-black flex items-center justify-center font-black shadow-[2px_2px_0px_#000]">⚡</span>
+            <span class="font-black text-lg uppercase">QRBox Studio</span>
+          </div>
+          <p class="text-xs font-medium text-neutral-600 dark:text-neutral-300 max-w-md leading-relaxed mb-4">
+            100% Локальная приватность: Генерация и сканирование выполняются строго в памяти браузера без передачи данных в облако.
+          </p>
+          <div class="inline-block px-3 py-1 rounded-lg border-2 border-black bg-pop-green text-xs font-mono font-bold shadow-[2px_2px_0px_#000]">
+            ⚡ Neo-Brutalist High-Octane Architecture
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-black uppercase tracking-wider text-xs mb-3 border-b-2 border-black pb-1"></h4>
+          <ul class="space-y-1.5 text-xs font-bold">
+            
+            <li><a href="/ru/url-qr-code-generator" class="hover:underline text-neutral-700 dark:text-neutral-300">→ QR-код Ссылки</a></li>
+            
+            <li><a href="/ru/wifi-qr-code-generator" class="hover:underline text-neutral-700 dark:text-neutral-300">→ WiFi QR-код</a></li>
+            
+            <li><a href="/ru/#tools-grid" class="hover:underline text-black dark:text-white">→ </a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-black uppercase tracking-wider text-xs mb-3 border-b-2 border-black pb-1">Глобальная Мультиязычная Сеть</h4>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono font-bold">
+            
+            <a href="/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">English</a>
+            
+            <a href="/zh/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Chinese</a>
+            
+            <a href="/es/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Spanish</a>
+            
+            <a href="/pt/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Portuguese</a>
+            
+            <a href="/de/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">German</a>
+            
+            <a href="/fr/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">French</a>
+            
+            <a href="/ja/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Japanese</a>
+            
+            <a href="/ko/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Korean</a>
+            
+            <a href="/it/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Italian</a>
+            
+            <a href="/ru/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Russian</a>
+            
+            <a href="/ar/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Arabic</a>
+            
+            <a href="/id/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Indonesian</a>
+            
+            <a href="/vi/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Vietnamese</a>
+            
+            <a href="/tr/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Turkish</a>
+            
+            <a href="/th/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Thai</a>
+            
+            <a href="/hi/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Hindi</a>
+            
+            <a href="/nl/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Dutch</a>
+            
+            <a href="/pl/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Polish</a>
+            
+            <a href="/sv/qr-barcode-scanner-reader" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Swedish</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t-2 border-black flex flex-col sm:flex-row items-center justify-between text-xs font-mono font-bold">
+        <div>
+          &copy; QRBox Studio. 100% Client-Side Execution.
+          
+          <span class="mx-2 opacity-40">|</span>
+          <a href="https://dischargeconceiteffort.com/bs4tah5fhz?key=f031a850339a5c91e7f30d97af3de3b2" target="_blank" rel="sponsored noopener noreferrer" class="text-black dark:text-yellow-300 hover:underline bg-yellow-300 dark:bg-black px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_#000]">⚡ Решение Партнера ↗</a>
+          
+        </div>
+        <div class="mt-2 sm:mt-0">19 Языков Мира · 56 Локальных Точек · 100% В Браузере</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-xl border-2 border-black bg-yellow-300 text-black shadow-[4px_4px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition opacity-0 pointer-events-none transform translate-y-4" title="Наверх">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <!-- Neo-Brutalism Global Interaction Runtime -->
+  <script>
+  (function() {
+    // 1. Mobile Drawer Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // 2. Tools Dropdown Toggle
+    const dropdownBtn = document.getElementById('tools-dropdown-btn');
+    const dropdownPanel = document.getElementById('tools-dropdown-panel');
+    if (dropdownBtn && dropdownPanel) {
+      dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownPanel.classList.toggle('hidden');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdownPanel.contains(e.target)) dropdownPanel.classList.add('hidden');
+      });
+    }
+
+    // 3. Smooth Back-to-Top
+    const btt = document.getElementById('back-to-top-btn');
+    if (btt) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY > 300;
+        btt.classList.toggle('opacity-0', !scrolled);
+        btt.classList.toggle('pointer-events-none', !scrolled);
+        btt.classList.toggle('translate-y-4', !scrolled);
+      });
+      btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // 4. Global Toast Notification Runtime
+    window.showToast = function(msg) {
+      const toast = document.createElement('div');
+      toast.className = 'fixed bottom-6 right-6 z-50 bg-white border-[3px] border-black text-black text-xs font-mono font-black px-5 py-3 rounded-xl shadow-[5px_5px_0px_#000] flex items-center space-x-2 transition-all duration-200';
+      toast.innerHTML = '<span class="text-amber-500">⚡</span><span>' + msg + '</span>';
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 250);
+      }, 2000);
+    };
+
+    // 5. Smooth Centered Search Focus Runtime with Header Offset
+    window.focusAndCenterSearch = function() {
+      const searchInput = document.getElementById('tool-search');
+      if (searchInput) {
+        const header = document.querySelector('header') || document.querySelector('nav');
+        const headerOffset = (header ? header.offsetHeight : 70) + 24;
+        const elementPosition = searchInput.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+
+        setTimeout(() => {
+          try {
+            searchInput.focus({ preventScroll: true });
+            searchInput.select();
+          } catch(e) {
+            searchInput.focus();
+          }
+          searchInput.classList.add('search-highlight-pulse');
+          setTimeout(() => searchInput.classList.remove('search-highlight-pulse'), 1200);
+        }, 300);
+        return true;
+      } else {
+        window.location.href = '/ru/?focus_search=1#tool-search';
+        return false;
+      }
+    };
+
+    // Intercept clicks on top nav search & mobile search
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('#nav-search-btn, .mobile-search-link, a[href*="#tool-search"]');
+      if (btn && document.getElementById('tool-search')) {
+        e.preventDefault();
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
+        if (history.replaceState) history.replaceState(null, '', '#tool-search');
+        window.focusAndCenterSearch();
+      }
+    });
+
+    // Auto focus when loading with #tool-search or focus_search=1
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const shouldFocus = window.location.hash === '#tool-search' || params.get('focus_search') === '1' || params.has('q');
+      if (shouldFocus && document.getElementById('tool-search')) {
+        setTimeout(window.focusAndCenterSearch, 250);
+      }
+    });
+
+    // Global Keyboard Shortcuts (Ctrl+K or /)
+    document.addEventListener('keydown', (e) => {
+      const isSearchKey = (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) ||
+                          (e.key.toLowerCase() === 'k' && (e.ctrlKey || e.metaKey));
+      if (isSearchKey) {
+        e.preventDefault();
+        window.focusAndCenterSearch();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

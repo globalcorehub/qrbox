@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="tr-TR" class="scroll-smooth" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>EAN-13 & UPC-A Ürün Barkodu Oluşturucu - Otomatik Kontrol Basamağı Hesabı | QRBox Studio</title>
+  <meta name="description" content="Perakende ürünler, süpermarketler ve e-ticaret için uluslararası standartta EAN-13 ve UPC-A barkodları oluşturun. 13. basamak sağlama toplamı otomatik hesaplanır.">
+  
+  <!-- Dynamic Zero-Dependency SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23fef08a' stroke='%23000' stroke-width='8'/><text x='50%' y='68%' font-size='60' font-weight='900' font-family='sans-serif' text-anchor='middle' fill='%23000'>⚡</text></svg>">
+  <link rel="canonical" href="https://qrbox.globalcorehub.com/tr/ean-upc-barcode-generator">
+  <link rel="alternate" hreflang="en" href="https://qrbox.globalcorehub.com/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="zh-CN" href="https://qrbox.globalcorehub.com/zh/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="zh" href="https://qrbox.globalcorehub.com/zh/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="es" href="https://qrbox.globalcorehub.com/es/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="pt" href="https://qrbox.globalcorehub.com/pt/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="de" href="https://qrbox.globalcorehub.com/de/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="fr" href="https://qrbox.globalcorehub.com/fr/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="ja" href="https://qrbox.globalcorehub.com/ja/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="ko-KR" href="https://qrbox.globalcorehub.com/ko/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="it-IT" href="https://qrbox.globalcorehub.com/it/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="ru-RU" href="https://qrbox.globalcorehub.com/ru/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="ar-SA" href="https://qrbox.globalcorehub.com/ar/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="id-ID" href="https://qrbox.globalcorehub.com/id/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="vi-VN" href="https://qrbox.globalcorehub.com/vi/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="tr-TR" href="https://qrbox.globalcorehub.com/tr/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="th-TH" href="https://qrbox.globalcorehub.com/th/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="hi-IN" href="https://qrbox.globalcorehub.com/hi/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="nl-NL" href="https://qrbox.globalcorehub.com/nl/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="pl-PL" href="https://qrbox.globalcorehub.com/pl/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="sv-SE" href="https://qrbox.globalcorehub.com/sv/ean-upc-barcode-generator" />
+  <link rel="alternate" hreflang="x-default" href="https://qrbox.globalcorehub.com/ean-upc-barcode-generator" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EAN-13 & UPC-A Ürün Barkodu Oluşturucu - Otomatik Kontrol Basamağı Hesabı | QRBox Studio">
+  <meta property="og:description" content="Perakende ürünler, süpermarketler ve e-ticaret için uluslararası standartta EAN-13 ve UPC-A barkodları oluşturun. 13. basamak sağlama toplamı otomatik hesaplanır.">
+  <meta property="og:url" content="https://qrbox.globalcorehub.com/tr/ean-upc-barcode-generator">
+  <meta property="og:site_name" content="QRBox Studio">
+  <meta property="og:image" content="https://qrbox.globalcorehub.com/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EAN-13 & UPC-A Ürün Barkodu Oluşturucu - Otomatik Kontrol Basamağı Hesabı | QRBox Studio">
+  <meta name="twitter:description" content="Perakende ürünler, süpermarketler ve e-ticaret için uluslararası standartta EAN-13 ve UPC-A barkodları oluşturun. 13. basamak sağlama toplamı otomatik hesaplanır.">
+  <meta name="twitter:image" content="https://qrbox.globalcorehub.com/og-image.svg">
+
+  <!-- Neo-Brutalist Typography (Space Grotesk & Lexend) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Framework -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Space Grotesk', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace']
+          },
+          colors: {
+            pop: {
+              yellow: '#fef08a',
+              pink: '#f472b6',
+              green: '#86efac',
+              cyan: '#7dd3fc',
+              purple: '#c084fc',
+              orange: '#fdba74'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Neo-Brutalism Design System CSS Stylesheet -->
+  <style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #fefce8;
+      color: #000000;
+      letter-spacing: -0.015em;
+    }
+    .dark body {
+      background-color: #18181b;
+      color: #fafafa;
+    }
+    .nb-box {
+      border: 3px solid #000000;
+      box-shadow: 4px 4px 0px #000000;
+      background-color: #ffffff;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dark .nb-box {
+      border: 3px solid #ffffff;
+      box-shadow: 4px 4px 0px #ffffff;
+      background-color: #27272a;
+    }
+    .nb-btn {
+      border: 3px solid #000000;
+      box-shadow: 4px 4px 0px #000000;
+      font-weight: 800;
+      transition: all 0.12s ease-in-out;
+      cursor: pointer;
+    }
+    .dark .nb-btn {
+      border: 3px solid #ffffff;
+      box-shadow: 4px 4px 0px #ffffff;
+    }
+    .nb-btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 5px 5px 0px #000000;
+    }
+    .dark .nb-btn:hover {
+      box-shadow: 5px 5px 0px #ffffff;
+    }
+    .nb-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px #000000;
+    }
+    .dark .nb-btn:active {
+      box-shadow: 1px 1px 0px #ffffff;
+    }
+    .nb-tag {
+      border: 2px solid #000000;
+      box-shadow: 2px 2px 0px #000000;
+      font-weight: 700;
+    }
+    .dark .nb-tag {
+      border: 2px solid #ffffff;
+      box-shadow: 2px 2px 0px #ffffff;
+    }
+    #tool-search, #search-section, [data-search-target] {
+      scroll-margin-top: 130px;
+    }
+    @keyframes search-glow-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .search-highlight-pulse {
+      animation: search-glow-pulse 0.4s ease-in-out 2;
+      box-shadow: 0 0 0 4px #f59e0b !important;
+      border-color: #f59e0b !important;
+    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #fefce8; border-left: 2px solid #000; }
+    ::-webkit-scrollbar-thumb { background: #000; }
+  </style>
+
+  <!-- Structured Data JSON-LD (WebSite & SearchAction) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "QRBox Studio",
+    "url": "https://qrbox.globalcorehub.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://qrbox.globalcorehub.com/?q={search_term_string}#tool-search",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Structured Data JSON-LD (WebApplication) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "EAN-13 & UPC-A Ürün Barkodu Oluşturucu - Otomatik Kontrol Basamağı Hesabı",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "url": "https://qrbox.globalcorehub.com/tr/ean-upc-barcode-generator",
+    "description": "Perakende ürünler, süpermarketler ve e-ticaret için uluslararası standartta EAN-13 ve UPC-A barkodları oluşturun. 13. basamak sağlama toplamı otomatik hesaplanır.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  
+  <!-- Semantic BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://qrbox.globalcorehub.com/tr/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tüm Araçlar",
+        "item": "https://qrbox.globalcorehub.com/tr/#tools-grid"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "EAN-13 & UPC-A Ürün Barkodu Oluşturucu - Otomatik Kontrol Basamağı Hesabı",
+        "item": "https://qrbox.globalcorehub.com/tr/ean-upc-barcode-generator"
+      }
+    ]
+  }
+  </script>
+  
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-yellow-300 selection:text-black">
+
+  <!-- Top Marquee Ticker -->
+  <div class="bg-black text-yellow-300 border-b-2 border-black py-1.5 px-4 text-xs font-mono font-bold overflow-hidden">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-300 animate-ping mr-1"></span>
+        <span class="tracking-wider uppercase">TACTILE NEO-BRUTALIST WORKSPACE</span>
+        <span class="hidden md:inline text-neutral-500">•</span>
+        <span class="hidden md:inline text-neutral-300">100% In-Browser Zero-Server Execution</span>
+      </div>
+      <div class="text-[11px] font-bold text-neutral-400">
+        %100 İstemci Tarafı
+      </div>
+    </div>
+  </div>
+
+  <!-- Neo-Brutalist High-Contrast Header -->
+  <header class="sticky top-0 z-40 w-full bg-white dark:bg-zinc-900 border-b-[3px] border-black dark:border-white shadow-[0_4px_0px_#000]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Brand Identity -->
+        <a href="/tr/" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-yellow-300 border-2 border-black flex items-center justify-center shadow-[3px_3px_0px_#000] group-hover:rotate-6 transition-transform">
+            <span class="font-black text-xl text-black">⚡</span>
+          </div>
+          <div>
+            <span class="font-black text-lg sm:text-xl tracking-tight text-black dark:text-white uppercase">QRBox Studio</span>
+            <span class="block text-[10px] font-mono font-bold text-neutral-500 uppercase">Interactive Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav class="hidden md:flex items-center space-x-2 text-xs font-bold uppercase">
+          <a href="/tr/" class="px-3.5 py-2 rounded-lg border-2 border-black shadow-[2px_2px_0px_#000] transition bg-white hover:bg-neutral-100 text-black">
+            Ana Sayfa
+          </a>
+
+          
+          <a href="/tr/url-qr-code-generator" title="URL QR Kod Oluşturucu - Özel Logo, Renk Seçenekleri ve Vektör SVG İndirme" class="px-3.5 py-2 rounded-lg border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[2px_2px_0px_#000] transition truncate max-w-[170px]">
+            URL QR Kod
+          </a>
+          
+          <a href="/tr/wifi-qr-code-generator" title="WiFi QR Kod Oluşturucu - Şifresiz Hızlı Bağlantı ve Yazdırılabilir Misafir Kartı" class="px-3.5 py-2 rounded-lg border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[2px_2px_0px_#000] transition truncate max-w-[170px]">
+            WiFi QR
+          </a>
+          
+
+          
+          <a href="https://dischargeconceiteffort.com/bs4tah5fhz?key=f031a850339a5c91e7f30d97af3de3b2" target="_blank" rel="sponsored noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1 px-3 py-2 rounded-lg border-2 border-black bg-[#fef08a] hover:bg-[#fde047] text-black shadow-[2px_2px_0px_#000] transition font-bold text-xs" title="Pro Kaynaklar">
+            <span>⚡ Pro Kaynaklar</span>
+            <span>↗</span>
+          </a>
+          
+
+          <!-- All Tools Dropdown -->
+          <div class="relative" id="tools-dropdown-container">
+            <button id="tools-dropdown-btn" type="button" class="px-3.5 py-2 rounded-lg border-2 border-black bg-pop-cyan text-black shadow-[2px_2px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition flex items-center space-x-1 font-bold">
+              <span>Tüm Araçlar</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="tools-dropdown-panel" class="hidden absolute right-0 mt-2 w-80 rounded-xl bg-white border-[3px] border-black shadow-[6px_6px_0px_#000] p-2.5 z-50">
+              <div class="text-[10px] font-mono text-neutral-500 px-3 py-1.5 uppercase font-bold border-b-2 border-black mb-1.5 flex justify-between">
+                <span>Tüm Araçlar</span>
+                <span>8 UNITS</span>
+              </div>
+              <div class="max-h-80 overflow-y-auto space-y-1">
+                
+                <a href="/tr/url-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">URL QR Kod</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Web sitesi bağlantıları için logolu, renk gradyanlı ve yüksek çözünürlüklü SVG/PNG indirmeli özel QR kodları oluşturun. %100 ücretsiz ve güvenli.</div>
+                </a>
+                
+                <a href="/tr/wifi-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">WiFi QR</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Misafirlerinizin ve müşterilerinizin şifre girmeden WiFi ağına bağlanmasını sağlayın. WPA3/WPA2 desteği ve yazdırılabilir masa kartı oluşturma.</div>
+                </a>
+                
+                <a href="/tr/vcard-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">vCard Kartvizit</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">vCard 3.0 dijital kartvizit oluşturun. Akıllı telefonla tarandığında telefon numaranızı, unvanınızı ve e-postanızı rehbere anında kaydeder.</div>
+                </a>
+                
+                <a href="/tr/barcode-generator-code128" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">Code 128 Barkod</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Depo envanteri, kargo etiketleri ve ürün seri numaraları için endüstri standardı yüksek yoğunluklu Code 128 barkodları oluşturun ve SVG formatında indirin.</div>
+                </a>
+                
+                <a href="/tr/ean-upc-barcode-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">EAN-13 Barkod</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Perakende ürünler, süpermarketler ve e-ticaret için uluslararası standartta EAN-13 ve UPC-A barkodları oluşturun. 13. basamak sağlama toplamı otomatik hesaplanır.</div>
+                </a>
+                
+                <a href="/tr/whatsapp-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">WhatsApp QR</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Müşterilerin numaranızı kaydetmesine gerek kalmadan doğrudan WhatsApp üzerinden sizinle iletişime geçmesini sağlayan ön mesajlı QR kod oluşturucu.</div>
+                </a>
+                
+                <a href="/tr/crypto-qr-code-generator" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">Kripto QR</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">BIP-21 ve ERC-681 standartlarına uygun Bitcoin, Ethereum ve USDT kripto ödeme ve bağış QR kodları oluşturun. Hatalı adres kopyalama riskini sıfırlayın.</div>
+                </a>
+                
+                <a href="/tr/qr-barcode-scanner-reader" class="block px-3 py-2 rounded-lg border-2 border-transparent hover:border-black hover:bg-yellow-100 transition text-black">
+                  <div class="font-black text-xs">QR Tarayıcı</div>
+                  <div class="text-[11px] text-neutral-600 truncate font-sans">Uygulama yüklemeden bilgisayar kameranızla veya ekran görüntüsü yükleyerek QR kodları ve barkodları tarayın ve anında çözün. %100 gizli ve ücretsiz.</div>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side: Search, Lang & Mobile Menu -->
+        <div class="flex items-center space-x-2">
+          <!-- Top Nav Search Button -->
+          <a href="/tr/?focus_search=1#tool-search" id="nav-search-btn" class="p-2 rounded-lg border-2 border-black bg-pop-pink text-black shadow-[2px_2px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition cursor-pointer" title="Search Tools (Ctrl+K)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </a>
+
+          <!-- Language Selector Details -->
+          <details class="relative">
+            <summary class="list-none cursor-pointer px-3 py-1.5 rounded-lg border-2 border-black bg-pop-green text-black shadow-[2px_2px_0px_#000] text-xs font-mono font-bold flex items-center space-x-1 transition">
+              <span>[TR]</span>
+              <span class="hidden sm:inline">TR</span>
+            </summary>
+            <div class="absolute right-0 mt-2 w-44 rounded-xl bg-white border-[3px] border-black shadow-[5px_5px_0px_#000] p-1.5 z-50 text-xs font-bold space-y-0.5">
+              
+              <a href="/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[EN] English</span>
+                
+              </a>
+              
+              <a href="/zh/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[ZH] 简体中文</span>
+                
+              </a>
+              
+              <a href="/es/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[ES] Español</span>
+                
+              </a>
+              
+              <a href="/pt/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[PT] Português</span>
+                
+              </a>
+              
+              <a href="/de/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[DE] Deutsch</span>
+                
+              </a>
+              
+              <a href="/fr/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[FR] Français</span>
+                
+              </a>
+              
+              <a href="/ja/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[JA] 日本語</span>
+                
+              </a>
+              
+              <a href="/ko/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[KO] 한국어</span>
+                
+              </a>
+              
+              <a href="/it/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[IT] Italiano</span>
+                
+              </a>
+              
+              <a href="/ru/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[RU] Русский</span>
+                
+              </a>
+              
+              <a href="/ar/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[AR] العربية</span>
+                
+              </a>
+              
+              <a href="/id/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[ID] Bahasa Indonesia</span>
+                
+              </a>
+              
+              <a href="/vi/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[VI] Tiếng Việt</span>
+                
+              </a>
+              
+              <a href="/tr/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black bg-yellow-300 border border-black">
+                <span>[TR] Türkçe</span>
+                <span>✓</span>
+              </a>
+              
+              <a href="/th/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[TH] ภาษาไทย</span>
+                
+              </a>
+              
+              <a href="/hi/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[HI] हिन्दी</span>
+                
+              </a>
+              
+              <a href="/nl/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[NL] Nederlands</span>
+                
+              </a>
+              
+              <a href="/pl/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[PL] Polski</span>
+                
+              </a>
+              
+              <a href="/sv/ean-upc-barcode-generator" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-yellow-200 transition text-black ">
+                <span>[SV] Svenska</span>
+                
+              </a>
+              
+            </div>
+          </details>
+
+          <!-- Mobile Menu Hamburger -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border-2 border-black bg-white shadow-[2px_2px_0px_#000] text-black transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t-[3px] border-black bg-yellow-50 px-4 pt-3 pb-6 space-y-2.5">
+      
+      <a href="https://dischargeconceiteffort.com/bs4tah5fhz?key=f031a850339a5c91e7f30d97af3de3b2" target="_blank" rel="sponsored noopener noreferrer" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl border-2 border-black bg-amber-300 text-xs font-bold text-black shadow-[3px_3px_0px_#000]">
+        <span>⚡ Pro Kaynaklar</span>
+        <span>↗</span>
+      </a>
+      
+      <a href="/tr/?focus_search=1#tool-search" class="mobile-search-link flex items-center justify-between px-3.5 py-2.5 rounded-xl border-2 border-black bg-white shadow-[3px_3px_0px_#000] text-xs font-mono font-bold text-black">
+        <span class="flex items-center space-x-2">
+          <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <span>Araçları ara... (/ tuşuna basın)</span>
+        </span>
+        <kbd class="text-[10px] px-1.5 py-0.5 rounded border-2 border-black bg-yellow-300 font-mono">/</kbd>
+      </a>
+      <a href="/tr/" class="block px-3.5 py-2 rounded-xl border-2 border-black font-black text-sm bg-white text-black">
+        Ana Sayfa
+      </a>
+      
+      <a href="/tr/url-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        URL QR Kod
+      </a>
+      
+      <a href="/tr/wifi-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        WiFi QR
+      </a>
+      
+      <a href="/tr/vcard-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        vCard Kartvizit
+      </a>
+      
+      <a href="/tr/barcode-generator-code128" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        Code 128 Barkod
+      </a>
+      
+      <a href="/tr/ean-upc-barcode-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        EAN-13 Barkod
+      </a>
+      
+      <a href="/tr/whatsapp-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        WhatsApp QR
+      </a>
+      
+      <a href="/tr/crypto-qr-code-generator" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        Kripto QR
+      </a>
+      
+      <a href="/tr/qr-barcode-scanner-reader" class="block px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-200 text-xs font-bold text-black shadow-[2px_2px_0px_#000]">
+        QR Tarayıcı
+      </a>
+      
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow w-full py-6 sm:py-10">
+    
+    <!-- Semantic Breadcrumbs for Subpages -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+      <nav aria-label="Breadcrumb" class="inline-flex items-center space-x-2 text-xs font-mono font-bold border-2 border-black bg-white px-4 py-2 rounded-xl shadow-[3px_3px_0px_#000]">
+        <a href="/tr/" class="hover:underline flex items-center space-x-1 text-black">
+          <span>Ana Sayfa</span>
+        </a>
+        <span>/</span>
+        <a href="/tr/#tools-grid" class="hover:underline text-neutral-600">Tüm Araçlar</a>
+        <span>/</span>
+        <span class="text-black uppercase truncate max-w-xs">EAN-13 Barkod</span>
+      </nav>
+    </div>
+    
+
+    
+<div class="max-w-5xl mx-auto">
+  <div class="bg-white rounded-2xl border-[3px] border-black shadow-[6px_6px_0px_#000] p-4 sm:p-6 md:p-8">
+    <div class="border-b-[3px] border-black pb-5">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-[#86efac] border-2 border-black text-xs font-mono font-black mb-2 shadow-[2px_2px_0px_#000]">
+        <span>📦 GS1 RETAIL BARCODE (EAN-13 / UPC-A / EAN-8)</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-black text-black tracking-tight">EAN-13 & UPC-A Ürün Barkodu Oluşturucu - Otomatik Kontrol Basamağı Hesabı</h1>
+      <p class="text-xs sm:text-sm font-bold text-neutral-700 mt-1 max-w-2xl">Perakende ürünler, süpermarketler ve e-ticaret için uluslararası standartta EAN-13 ve UPC-A barkodları oluşturun. 13. basamak sağlama toplamı otomatik hesaplanır.</p>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <div class="lg:col-span-7 space-y-4 font-mono">
+        <div>
+          <label class="block text-xs font-black text-black mb-1">Standart:</label>
+          <select id="ean-format" class="w-full p-2.5 bg-white border-2 border-black text-xs font-black shadow-[2px_2px_0px_#000]">
+            <option value="EAN13" selected>EAN-13 (International Retail - 12/13 digits)</option>
+            <option value="UPC">UPC-A (North America Retail - 11/12 digits)</option>
+            <option value="EAN8">EAN-8 (Small Package Retail - 7/8 digits)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-black text-black mb-1">Ürün Barkod Numarası (12 veya 13 Basamak):</label>
+          <input type="text" id="ean-input" maxlength="13" value="4006381333931" class="w-full p-3 bg-[#86efac]/20 border-2 border-black text-base font-bold focus:outline-none shadow-[2px_2px_0px_#000]">
+          <div id="ean-status-msg" class="mt-1.5 text-xs font-bold text-emerald-700">
+            ✓ Kontrol Basamağı Geçerli
+          </div>
+        </div>
+
+        <div class="p-3 bg-white border-2 border-black rounded-lg text-xs space-y-1">
+          <div class="font-black text-black">MODULO-10 CHECKSUM LOGIC:</div>
+          <p class="text-[11px] text-neutral-600">Odd and even digits multiplied alternately by 1 and 3; check digit forces sum to nearest multiple of 10.</p>
+        </div>
+
+        <div class="pt-2">
+          <span class="text-xs font-black text-black block mb-1.5">Hazır Renkler:</span>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" class="btn-ean-preset px-2.5 py-1 text-xs font-bold bg-white border-2 border-black shadow-[2px_2px_0px_#000] hover:bg-neutral-100" data-fmt="EAN13" data-val="4006381333931">EAN-13 Sample</button>
+            <button type="button" class="btn-ean-preset px-2.5 py-1 text-xs font-bold bg-white border-2 border-black shadow-[2px_2px_0px_#000] hover:bg-neutral-100" data-fmt="UPC" data-val="012345678905">UPC-A Sample</button>
+            <button type="button" class="btn-ean-preset px-2.5 py-1 text-xs font-bold bg-white border-2 border-black shadow-[2px_2px_0px_#000] hover:bg-neutral-100" data-fmt="EAN8" data-val="90311017">EAN-8 Sample</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 flex flex-col items-center">
+        <div class="p-5 bg-white border-[3px] border-black shadow-[5px_5px_0px_#000] rounded-2xl text-center w-full max-w-[340px]">
+          <div class="w-full flex items-center justify-center p-3 bg-white border-2 border-black rounded-xl mb-3 shadow-[2px_2px_0px_#000] overflow-hidden">
+            <svg id="ean-svg" class="max-w-full h-auto"></svg>
+          </div>
+          <canvas id="ean-canvas" class="hidden"></canvas>
+          <div id="ean-render-info" class="text-[11px] font-mono font-bold text-neutral-600">
+            GS1 Standard Verified
+          </div>
+        </div>
+
+        <div class="mt-4 w-full max-w-[340px] space-y-2 font-mono">
+          <button id="btn-dl-ean-svg" type="button" class="w-full py-2.5 px-4 bg-[#67e8f9] border-[3px] border-black text-black font-black text-xs shadow-[3px_3px_0px_#000] hover:bg-[#22d3ee] active:translate-x-0.5 active:translate-y-0.5 transition flex items-center justify-center space-x-2">
+            <span>📐</span>
+            <span>Vektör SVG İndir</span>
+          </button>
+          <button id="btn-dl-ean-png" type="button" class="w-full py-2.5 px-4 bg-[#86efac] border-[3px] border-black text-black font-black text-xs shadow-[3px_3px_0px_#000] hover:bg-[#4ade80] active:translate-x-0.5 active:translate-y-0.5 transition flex items-center justify-center space-x-2">
+            <span>💾</span>
+            <span>Yüksek Çözünürlüklü PNG İndir</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+        <!-- Rule 9 Contextual Partner Solution Trigger Banner -->
+        <div class="mt-8 mb-6 p-4 rounded-xl border-[3px] border-black bg-[#fef08a] shadow-[4px_4px_0px_#000]">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div class="flex items-center space-x-2.5">
+              <span class="w-3 h-3 bg-[#f472b6] border-2 border-black inline-block animate-pulse"></span>
+              <span class="text-xs font-black font-mono uppercase tracking-wider text-black">SPONSORED RECOMMENDATION</span>
+              <span class="text-xs font-bold text-neutral-800">Enterprise Cloud QR & Barcode Asset Management Suite</span>
+            </div>
+            <a href="https://dischargeconceiteffort.com/bs4tah5fhz?key=f031a850339a5c91e7f30d97af3de3b2" target="_blank" rel="sponsored noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border-2 border-black bg-black text-white hover:bg-neutral-800 text-xs font-mono font-black shadow-[2px_2px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition flex items-center space-x-1 flex-shrink-0">
+              <span>⚡ Önerilen Ortak Çözüm ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- SEO & Architecture Explanations -->
+        <div class="mt-8 pt-6 border-t-[3px] border-black grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
+          <div>
+            <h2 class="text-sm sm:text-base font-black uppercase font-mono tracking-wider mb-2">EAN-13 & UPC-A Ürün Barkodu Oluşturucu - Otomatik Kontrol Basamağı Hesabı Hakkında</h2>
+            <p class="text-xs leading-relaxed font-medium mb-4"><strong>ean 13 barkod oluşturucu</strong> için tarayıcı içi, sıfır gecikmeli çevrimiçi araç. Tüm QR ve barkod hesaplamaları yerel bellek kum havuzunda çalışır.</p>
+            <h3 class="text-xs font-black uppercase font-mono tracking-wider opacity-80 mb-2">Desteklenen Özellikler ve Formatlar</h3>
+            <ul class="space-y-0.5"><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>ean 13 barkod oluşturucu</li><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>ürün barkodu yapma</li><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>barkod kontrol basamağı hesaplama</li><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>market ürün barkodu üretici</li><li class='flex items-center text-xs font-mono py-1 font-bold'><span class='mr-2 font-black'>⚡</span>upc a barkod</li></ul>
+          </div>
+          <div>
+            <h2 class="text-sm sm:text-base font-black uppercase font-mono tracking-wider mb-2">Mimari ve Gizlilik Garantileri</h2>
+            <div class="space-y-3">
+              <div class="p-3.5 rounded-xl border-2 border-black bg-[#86efac] shadow-[3px_3px_0px_#000]">
+                <h4 class="text-xs font-black font-mono mb-1">🛡️ %100 İstemci Tarafı Gizlilik</h4>
+                <p class="text-[11px] leading-relaxed font-bold">WiFi şifreleriniz, iletişim bilgileriniz, telefonlarınız ve ödeme anahtarlarınız cihazınızdan asla ayrılmaz. Sıfır sunucu günlüğü.</p>
+              </div>
+              <div class="p-3.5 rounded-xl border-2 border-black bg-[#67e8f9] shadow-[3px_3px_0px_#000]">
+                <h4 class="text-xs font-black font-mono mb-1">⚡ Ölçeklenebilir Vektör & Anında Üretim</h4>
+                <p class="text-[11px] leading-relaxed font-bold">Milisaniyenin altında yüksek çözünürlüklü ticari baskıya hazır HTML5 Canvas ve SVG vektör üretimi.</p>
+              </div>
+            </div>
+            <p class="text-[10px] font-mono font-bold mt-4 opacity-75">⚠️ Bildirim: Tüm barkod üretimi ve tarama işlemleri uzak sunucularda depolanmadan %100 istemci belleğinde gerçekleşir.</p>
+          </div>
+        </div>
+        
+  </div>
+</div>
+
+<script>
+/*! JsBarcode v3.11.6 | (c) Johan Lindell | MIT license */
+!function(t){var e={};function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)n.d(r,o,function(e){return t[e]}.bind(null,o));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=15)}([function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});e.default=function t(e,n){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.data=e,this.text=n.text||e,this.options=n}},function(t,e,n){"use strict";var r;function o(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}Object.defineProperty(e,"__esModule",{value:!0});var i=e.SET_A=0,a=e.SET_B=1,u=e.SET_C=2,f=(e.SHIFT=98,e.START_A=103),c=e.START_B=104,s=e.START_C=105;e.MODULO=103,e.STOP=106,e.FNC1=207,e.SET_BY_CODE=(o(r={},f,i),o(r,c,a),o(r,s,u),r),e.SWAP={101:i,100:a,99:u},e.A_START_CHAR=String.fromCharCode(208),e.B_START_CHAR=String.fromCharCode(209),e.C_START_CHAR=String.fromCharCode(210),e.A_CHARS="[\0-_È-Ï]",e.B_CHARS="[ -È-Ï]",e.C_CHARS="(Ï*[0-9]{2}Ï*)",e.BARS=[11011001100,11001101100,11001100110,10010011e3,10010001100,10001001100,10011001e3,10011000100,10001100100,11001001e3,11001000100,11000100100,10110011100,10011011100,10011001110,10111001100,10011101100,10011100110,11001110010,11001011100,11001001110,11011100100,11001110100,11101101110,11101001100,11100101100,11100100110,11101100100,11100110100,11100110010,11011011e3,11011000110,11000110110,10100011e3,10001011e3,10001000110,10110001e3,10001101e3,10001100010,11010001e3,11000101e3,11000100010,10110111e3,10110001110,10001101110,10111011e3,10111000110,10001110110,11101110110,11010001110,11000101110,11011101e3,11011100010,11011101110,11101011e3,11101000110,11100010110,11101101e3,11101100010,11100011010,11101111010,11001000010,11110001010,1010011e4,10100001100,1001011e4,10010000110,10000101100,10000100110,1011001e4,10110000100,1001101e4,10011000010,10000110100,10000110010,11000010010,1100101e4,11110111010,11000010100,10001111010,10100111100,10010111100,10010011110,10111100100,10011110100,10011110010,11110100100,11110010100,11110010010,11011011110,11011110110,11110110110,10101111e3,10100011110,10001011110,10111101e3,10111100010,11110101e3,11110100010,10111011110,10111101110,11101011110,11110101110,11010000100,1101001e4,11010011100,1100011101011]},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});e.SIDE_BIN="101",e.MIDDLE_BIN="01010",e.BINARIES={L:["0001101","0011001","0010011","0111101","0100011","0110001","0101111","0111011","0110111","0001011"],G:["0100111","0110011","0011011","0100001","0011101","0111001","0000101","0010001","0001001","0010111"],R:["1110010","1100110","1101100","1000010","1011100","1001110","1010000","1000100","1001000","1110100"],O:["0001101","0011001","0010011","0111101","0100011","0110001","0101111","0111011","0110111","0001011"],E:["0100111","0110011","0011011","0100001","0011101","0111001","0000101","0010001","0001001","0010111"]},e.EAN2_STRUCTURE=["LL","LG","GL","GG"],e.EAN5_STRUCTURE=["GGLLL","GLGLL","GLLGL","GLLLG","LGGLL","LLGGL","LLLGG","LGLGL","LGLLG","LLGLG"],e.EAN13_STRUCTURE=["LLLLLL","LLGLGG","LLGGLG","LLGGGL","LGLLGG","LGGLLG","LGGGLL","LGLGLG","LGLGGL","LGGLGL"]},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=n(2);e.default=function(t,e,n){var o=t.split("").map((function(t,n){return r.BINARIES[e[n]]})).map((function(e,n){return e?e[t[n]]:""}));if(n){var i=t.length-1;o=o.map((function(t,e){return e<i?t+n:t}))}return o.join("")}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(0);var a=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"encode",value:function(){for(var t="110",e=0;e<this.data.length;e++){var n=parseInt(this.data[e]).toString(2);n=u(n,4-n.length);for(var r=0;r<n.length;r++)t+="0"==n[r]?"100":"110"}return{data:t+="1001",text:this.text}}},{key:"valid",value:function(){return-1!==this.data.search(/^[0-9]+$/)}}]),e}(((r=i)&&r.__esModule?r:{default:r}).default);function u(t,e){for(var n=0;n<e;n++)t="0"+t;return t}e.default=a},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(0),a=(r=i)&&r.__esModule?r:{default:r},u=n(1);var f=function(t){function e(t,n){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e);var r=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t.substring(1),n));return r.bytes=t.split("").map((function(t){return t.charCodeAt(0)})),r}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return/^[\x00-\x7F\xC8-\xD3]+$/.test(this.data)}},{key:"encode",value:function(){var t=this.bytes,n=t.shift()-105,r=u.SET_BY_CODE[n];if(void 0===r)throw new RangeError("The encoding does not start with a start character.");!0===this.shouldEncodeAsEan128()&&t.unshift(u.FNC1);var o=e.next(t,1,r);return{text:this.text===this.data?this.text.replace(/[^\x20-\x7E]/g,""):this.text,data:e.getBar(n)+o.result+e.getBar((o.checksum+n)%u.MODULO)+e.getBar(u.STOP)}}},{key:"shouldEncodeAsEan128",value:function(){var t=this.options.ean128||!1;return"string"==typeof t&&(t="true"===t.toLowerCase()),t}}],[{key:"getBar",value:function(t){return u.BARS[t]?u.BARS[t].toString():""}},{key:"correctIndex",value:function(t,e){if(e===u.SET_A){var n=t.shift();return n<32?n+64:n-32}return e===u.SET_B?t.shift()-32:10*(t.shift()-48)+t.shift()-48}},{key:"next",value:function(t,n,r){if(!t.length)return{result:"",checksum:0};var o=void 0,i=void 0;if(t[0]>=200){i=t.shift()-105;var a=u.SWAP[i];void 0!==a?o=e.next(t,n+1,a):(r!==u.SET_A&&r!==u.SET_B||i!==u.SHIFT||(t[0]=r===u.SET_A?t[0]>95?t[0]-96:t[0]:t[0]<32?t[0]+96:t[0]),o=e.next(t,n+1,r))}else i=e.correctIndex(t,r),o=e.next(t,n+1,r);var f=i*n;return{result:e.getBar(i)+o.result,checksum:f+o.checksum}}}]),e}(a.default);e.default=f},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.mod10=function(t){for(var e=0,n=0;n<t.length;n++){var r=parseInt(t[n]);(n+t.length)%2==0?e+=r:e+=2*r%10+Math.floor(2*r/10)}return(10-e%10)%10},e.mod11=function(t){for(var e=0,n=[2,3,4,5,6,7],r=0;r<t.length;r++){var o=parseInt(t[t.length-1-r]);e+=n[r%n.length]*o}return(11-e%11)%11}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(t[r]=n[r])}return t};e.default=function(t,e){return r({},t,e)}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),o=n(2),i=a(n(3));function a(t){return t&&t.__esModule?t:{default:t}}var u=function(t){function e(t,n){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e);var r=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return r.fontSize=!n.flat&&n.fontSize>10*n.width?10*n.width:n.fontSize,r.guardHeight=n.height+r.fontSize/2+n.textMargin,r}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),r(e,[{key:"encode",value:function(){return this.options.flat?this.encodeFlat():this.encodeGuarded()}},{key:"leftText",value:function(t,e){return this.text.substr(t,e)}},{key:"leftEncode",value:function(t,e){return(0,i.default)(t,e)}},{key:"rightText",value:function(t,e){return this.text.substr(t,e)}},{key:"rightEncode",value:function(t,e){return(0,i.default)(t,e)}},{key:"encodeGuarded",value:function(){var t={fontSize:this.fontSize},e={height:this.guardHeight};return[{data:o.SIDE_BIN,options:e},{data:this.leftEncode(),text:this.leftText(),options:t},{data:o.MIDDLE_BIN,options:e},{data:this.rightEncode(),text:this.rightText(),options:t},{data:o.SIDE_BIN,options:e}]}},{key:"encodeFlat",value:function(){return{data:[o.SIDE_BIN,this.leftEncode(),o.MIDDLE_BIN,this.rightEncode(),o.SIDE_BIN].join(""),text:this.text}}}]),e}(a(n(0)).default);e.default=u},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}();e.checksum=u;var o=i(n(3));function i(t){return t&&t.__esModule?t:{default:t}}var a=function(t){function e(t,n){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),-1!==t.search(/^[0-9]{11}$/)&&(t+=u(t));var r=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return r.displayValue=n.displayValue,n.fontSize>10*n.width?r.fontSize=10*n.width:r.fontSize=n.fontSize,r.guardHeight=n.height+r.fontSize/2+n.textMargin,r}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),r(e,[{key:"valid",value:function(){return-1!==this.data.search(/^[0-9]{12}$/)&&this.data[11]==u(this.data)}},{key:"encode",value:function(){return this.options.flat?this.flatEncoding():this.guardedEncoding()}},{key:"flatEncoding",value:function(){var t="";return t+="101",t+=(0,o.default)(this.data.substr(0,6),"LLLLLL"),t+="01010",t+=(0,o.default)(this.data.substr(6,6),"RRRRRR"),{data:t+="101",text:this.text}}},{key:"guardedEncoding",value:function(){var t=[];return this.displayValue&&t.push({data:"00000000",text:this.text.substr(0,1),options:{textAlign:"left",fontSize:this.fontSize}}),t.push({data:"101"+(0,o.default)(this.data[0],"L"),options:{height:this.guardHeight}}),t.push({data:(0,o.default)(this.data.substr(1,5),"LLLLL"),text:this.text.substr(1,5),options:{fontSize:this.fontSize}}),t.push({data:"01010",options:{height:this.guardHeight}}),t.push({data:(0,o.default)(this.data.substr(6,5),"RRRRR"),text:this.text.substr(6,5),options:{fontSize:this.fontSize}}),t.push({data:(0,o.default)(this.data[11],"R")+"101",options:{height:this.guardHeight}}),this.displayValue&&t.push({data:"00000000",text:this.text.substr(11,1),options:{textAlign:"right",fontSize:this.fontSize}}),t}}]),e}(i(n(0)).default);function u(t){var e,n=0;for(e=1;e<11;e+=2)n+=parseInt(t[e]);for(e=0;e<11;e+=2)n+=3*parseInt(t[e]);return(10-n%10)%10}e.default=a},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(31),a=n(0);function u(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function f(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}var c=function(t){function e(){return u(this,e),f(this,(e.__proto__||Object.getPrototypeOf(e)).apply(this,arguments))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return-1!==this.data.search(/^([0-9]{2})+$/)}},{key:"encode",value:function(){var t=this,e=this.data.match(/.{2}/g).map((function(e){return t.encodePair(e)})).join("");return{data:i.START_BIN+e+i.END_BIN,text:this.text}}},{key:"encodePair",value:function(t){var e=i.BINARIES[t[1]];return i.BINARIES[t[0]].split("").map((function(t,n){return("1"===t?"111":"1")+("1"===e[n]?"000":"0")})).join("")}}]),e}(((r=a)&&r.__esModule?r:{default:r}).default);e.default=c},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(t){var e=["width","height","textMargin","fontSize","margin","marginTop","marginBottom","marginLeft","marginRight"];for(var n in e)e.hasOwnProperty(n)&&(n=e[n],"string"==typeof t[n]&&(t[n]=parseInt(t[n],10)));"string"==typeof t.displayValue&&(t.displayValue="false"!=t.displayValue);return t}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r={width:2,height:100,format:"auto",displayValue:!0,fontOptions:"",font:"monospace",text:void 0,textAlign:"center",textPosition:"bottom",textMargin:2,fontSize:20,background:"#ffffff",lineColor:"#000000",margin:10,marginTop:void 0,marginBottom:void 0,marginLeft:void 0,marginRight:void 0,valid:function(){}};e.default=r},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.getTotalWidthOfEncodings=e.calculateEncodingAttributes=e.getBarcodePadding=e.getEncodingHeight=e.getMaximumHeightOfEncodings=void 0;var r,o=n(7),i=(r=o)&&r.__esModule?r:{default:r};function a(t,e){return e.height+(e.displayValue&&t.text.length>0?e.fontSize+e.textMargin:0)+e.marginTop+e.marginBottom}function u(t,e,n){if(n.displayValue&&e<t){if("center"==n.textAlign)return Math.floor((t-e)/2);if("left"==n.textAlign)return 0;if("right"==n.textAlign)return Math.floor(t-e)}return 0}function f(t,e,n){var r;if(n)r=n;else{if("undefined"==typeof document)return 0;r=document.createElement("canvas").getContext("2d")}r.font=e.fontOptions+" "+e.fontSize+"px "+e.font;var o=r.measureText(t);return o?o.width:0}e.getMaximumHeightOfEncodings=function(t){for(var e=0,n=0;n<t.length;n++)t[n].height>e&&(e=t[n].height);return e},e.getEncodingHeight=a,e.getBarcodePadding=u,e.calculateEncodingAttributes=function(t,e,n){for(var r=0;r<t.length;r++){var o,c=t[r],s=(0,i.default)(e,c.options);o=s.displayValue?f(c.text,s,n):0;var l=c.data.length*s.width;c.width=Math.ceil(Math.max(o,l)),c.height=a(c,s),c.barcodePadding=u(o,l,s)}},e.getTotalWidthOfEncodings=function(t){for(var e=0,n=0;n<t.length;n++)e+=t[n].width;return e}},function(t,e,n){"use strict";function r(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function o(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}function i(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}Object.defineProperty(e,"__esModule",{value:!0});var a=function(t){function e(t,n){r(this,e);var i=o(this,(e.__proto__||Object.getPrototypeOf(e)).call(this));return i.name="InvalidInputException",i.symbology=t,i.input=n,i.message='"'+i.input+'" is not a valid input for '+i.symbology,i}return i(e,Error),e}(),u=function(t){function e(){r(this,e);var t=o(this,(e.__proto__||Object.getPrototypeOf(e)).call(this));return t.name="InvalidElementException",t.message="Not supported type to render on",t}return i(e,Error),e}(),f=function(t){function e(){r(this,e);var t=o(this,(e.__proto__||Object.getPrototypeOf(e)).call(this));return t.name="NoElementException",t.message="No element to render on.",t}return i(e,Error),e}();e.InvalidInputException=a,e.InvalidElementException=u,e.NoElementException=f},function(t,e,n){"use strict";var r=p(n(16)),o=p(n(7)),i=p(n(41)),a=p(n(42)),u=p(n(43)),f=p(n(11)),c=p(n(49)),s=n(14),l=p(n(12));function p(t){return t&&t.__esModule?t:{default:t}}var d=function(){},h=function(t,e,n){var r=new d;if(void 0===t)throw Error("No element to render on was provided.");return r._renderProperties=(0,u.default)(t),r._encodings=[],r._options=l.default,r._errorHandler=new c.default(r),void 0!==e&&((n=n||{}).format||(n.format=_()),r.options(n)[n.format](e,n).render()),r};for(var y in h.getModule=function(t){return r.default[t]},r.default)r.default.hasOwnProperty(y)&&b(r.default,y);function b(t,e){d.prototype[e]=d.prototype[e.toUpperCase()]=d.prototype[e.toLowerCase()]=function(n,r){var i=this;return i._errorHandler.wrapBarcodeCall((function(){r.text=void 0===r.text?void 0:""+r.text;var a=(0,o.default)(i._options,r);a=(0,f.default)(a);var u=t[e],c=v(n,u,a);return i._encodings.push(c),i}))}}function v(t,e,n){var r=new e(t=""+t,n);if(!r.valid())throw new s.InvalidInputException(r.constructor.name,t);var a=r.encode();a=(0,i.default)(a);for(var u=0;u<a.length;u++)a[u].options=(0,o.default)(n,a[u].options);return a}function _(){return r.default.CODE128?"CODE128":Object.keys(r.default)[0]}function g(t,e,n){e=(0,i.default)(e);for(var r=0;r<e.length;r++)e[r].options=(0,o.default)(n,e[r].options),(0,a.default)(e[r].options);(0,a.default)(n),new(0,t.renderer)(t.element,e,n).render(),t.afterRender&&t.afterRender()}d.prototype.options=function(t){return this._options=(0,o.default)(this._options,t),this},d.prototype.blank=function(t){var e=new Array(t+1).join("0");return this._encodings.push({data:e}),this},d.prototype.init=function(){var t;if(this._renderProperties)for(var e in Array.isArray(this._renderProperties)||(this._renderProperties=[this._renderProperties]),this._renderProperties){t=this._renderProperties[e];var n=(0,o.default)(this._options,t.options);"auto"==n.format&&(n.format=_()),this._errorHandler.wrapBarcodeCall((function(){var e=v(n.value,r.default[n.format.toUpperCase()],n);g(t,e,n)}))}},d.prototype.render=function(){if(!this._renderProperties)throw new s.NoElementException;if(Array.isArray(this._renderProperties))for(var t=0;t<this._renderProperties.length;t++)g(this._renderProperties[t],this._encodings,this._options);else g(this._renderProperties,this._encodings,this._options);return this},d.prototype._defaults=l.default,"undefined"!=typeof window&&(window.JsBarcode=h),"undefined"!=typeof jQuery&&(jQuery.fn.JsBarcode=function(t,e){var n=[];return jQuery(this).each((function(){n.push(this)})),h(n,t,e)}),t.exports=h},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=n(17),o=n(18),i=n(24),a=n(30),u=n(33),f=n(38),c=n(39),s=n(40);e.default={CODE39:r.CODE39,CODE128:o.CODE128,CODE128A:o.CODE128A,CODE128B:o.CODE128B,CODE128C:o.CODE128C,EAN13:i.EAN13,EAN8:i.EAN8,EAN5:i.EAN5,EAN2:i.EAN2,UPC:i.UPC,UPCE:i.UPCE,ITF14:a.ITF14,ITF:a.ITF,MSI:u.MSI,MSI10:u.MSI10,MSI11:u.MSI11,MSI1010:u.MSI1010,MSI1110:u.MSI1110,pharmacode:f.pharmacode,codabar:c.codabar,GenericBarcode:s.GenericBarcode}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.CODE39=void 0;var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(0);var a=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),t=t.toUpperCase(),n.mod43&&(t+=function(t){return u[t]}(function(t){for(var e=0,n=0;n<t.length;n++)e+=s(t[n]);return e%=43}(t))),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"encode",value:function(){for(var t=c("*"),e=0;e<this.data.length;e++)t+=c(this.data[e])+"0";return{data:t+=c("*"),text:this.text}}},{key:"valid",value:function(){return-1!==this.data.search(/^[0-9A-Z\-\.\ \$\/\+\%]+$/)}}]),e}(((r=i)&&r.__esModule?r:{default:r}).default),u=["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","-","."," ","$","/","+","%","*"],f=[20957,29783,23639,30485,20951,29813,23669,20855,29789,23645,29975,23831,30533,22295,30149,24005,21623,29981,23837,22301,30023,23879,30545,22343,30161,24017,21959,30065,23921,22385,29015,18263,29141,17879,29045,18293,17783,29021,18269,17477,17489,17681,20753,35770];function c(t){return function(t){return f[t].toString(2)}(s(t))}function s(t){return u.indexOf(t)}e.CODE39=a},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.CODE128C=e.CODE128B=e.CODE128A=e.CODE128=void 0;var r=u(n(19)),o=u(n(21)),i=u(n(22)),a=u(n(23));function u(t){return t&&t.__esModule?t:{default:t}}e.CODE128=r.default,e.CODE128A=o.default,e.CODE128B=i.default,e.CODE128C=a.default},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=i(n(5)),o=i(n(20));function i(t){return t&&t.__esModule?t:{default:t}}function a(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}var u=function(t){function e(t,n){if(function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),/^[\x00-\x7F\xC8-\xD3]+$/.test(t))var r=a(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,(0,o.default)(t),n));else r=a(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return a(r)}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),e}(r.default);e.default=u},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=n(1),o=function(t){return t.match(new RegExp("^"+r.A_CHARS+"*"))[0].length},i=function(t){return t.match(new RegExp("^"+r.B_CHARS+"*"))[0].length},a=function(t){return t.match(new RegExp("^"+r.C_CHARS+"*"))[0]};function u(t,e){var n=e?r.A_CHARS:r.B_CHARS,o=t.match(new RegExp("^("+n+"+?)(([0-9]{2}){2,})([^0-9]|$)"));if(o)return o[1]+String.fromCharCode(204)+f(t.substring(o[1].length));var i=t.match(new RegExp("^"+n+"+"))[0];return i.length===t.length?t:i+String.fromCharCode(e?205:206)+u(t.substring(i.length),!e)}function f(t){var e=a(t),n=e.length;if(n===t.length)return t;t=t.substring(n);var r=o(t)>=i(t);return e+String.fromCharCode(r?206:205)+u(t,r)}e.default=function(t){var e=void 0;if(a(t).length>=2)e=r.C_START_CHAR+f(t);else{var n=o(t)>i(t);e=(n?r.A_START_CHAR:r.B_START_CHAR)+u(t,n)}return e.replace(/[\xCD\xCE]([^])[\xCD\xCE]/,(function(t,e){return String.fromCharCode(203)+e}))}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(5),a=(r=i)&&r.__esModule?r:{default:r},u=n(1);var f=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,u.A_START_CHAR+t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return new RegExp("^"+u.A_CHARS+"+$").test(this.data)}}]),e}(a.default);e.default=f},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(5),a=(r=i)&&r.__esModule?r:{default:r},u=n(1);var f=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,u.B_START_CHAR+t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return new RegExp("^"+u.B_CHARS+"+$").test(this.data)}}]),e}(a.default);e.default=f},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(5),a=(r=i)&&r.__esModule?r:{default:r},u=n(1);var f=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,u.C_START_CHAR+t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return new RegExp("^"+u.C_CHARS+"+$").test(this.data)}}]),e}(a.default);e.default=f},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.UPCE=e.UPC=e.EAN2=e.EAN5=e.EAN8=e.EAN13=void 0;var r=c(n(25)),o=c(n(26)),i=c(n(27)),a=c(n(28)),u=c(n(9)),f=c(n(29));function c(t){return t&&t.__esModule?t:{default:t}}e.EAN13=r.default,e.EAN8=o.default,e.EAN5=i.default,e.EAN2=a.default,e.UPC=u.default,e.UPCE=f.default},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=function t(e,n,r){null===e&&(e=Function.prototype);var o=Object.getOwnPropertyDescriptor(e,n);if(void 0===o){var i=Object.getPrototypeOf(e);return null===i?void 0:t(i,n,r)}if("value"in o)return o.value;var a=o.get;return void 0!==a?a.call(r):void 0},a=n(2),u=n(8),f=(r=u)&&r.__esModule?r:{default:r};var c=function(t){return(10-t.substr(0,12).split("").map((function(t){return+t})).reduce((function(t,e,n){return n%2?t+3*e:t+e}),0)%10)%10},s=function(t){function e(t,n){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),-1!==t.search(/^[0-9]{12}$/)&&(t+=c(t));var r=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return r.lastChar=n.lastChar,r}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return-1!==this.data.search(/^[0-9]{13}$/)&&+this.data[12]===c(this.data)}},{key:"leftText",value:function(){return i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"leftText",this).call(this,1,6)}},{key:"leftEncode",value:function(){var t=this.data.substr(1,6),n=a.EAN13_STRUCTURE[this.data[0]];return i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"leftEncode",this).call(this,t,n)}},{key:"rightText",value:function(){return i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"rightText",this).call(this,7,6)}},{key:"rightEncode",value:function(){var t=this.data.substr(7,6);return i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"rightEncode",this).call(this,t,"RRRRRR")}},{key:"encodeGuarded",value:function(){var t=i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"encodeGuarded",this).call(this);return this.options.displayValue&&(t.unshift({data:"000000000000",text:this.text.substr(0,1),options:{textAlign:"left",fontSize:this.fontSize}}),this.options.lastChar&&(t.push({data:"00"}),t.push({data:"00000",text:this.options.lastChar,options:{fontSize:this.fontSize}}))),t}}]),e}(f.default);e.default=s},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=function t(e,n,r){null===e&&(e=Function.prototype);var o=Object.getOwnPropertyDescriptor(e,n);if(void 0===o){var i=Object.getPrototypeOf(e);return null===i?void 0:t(i,n,r)}if("value"in o)return o.value;var a=o.get;return void 0!==a?a.call(r):void 0},a=n(8),u=(r=a)&&r.__esModule?r:{default:r};var f=function(t){return(10-t.substr(0,7).split("").map((function(t){return+t})).reduce((function(t,e,n){return n%2?t+e:t+3*e}),0)%10)%10},c=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),-1!==t.search(/^[0-9]{7}$/)&&(t+=f(t)),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return-1!==this.data.search(/^[0-9]{8}$/)&&+this.data[7]===f(this.data)}},{key:"leftText",value:function(){return i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"leftText",this).call(this,0,4)}},{key:"leftEncode",value:function(){var t=this.data.substr(0,4);return i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"leftEncode",this).call(this,t,"LLLL")}},{key:"rightText",value:function(){return i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"rightText",this).call(this,4,4)}},{key:"rightEncode",value:function(){var t=this.data.substr(4,4);return i(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"rightEncode",this).call(this,t,"RRRR")}}]),e}(u.default);e.default=c},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),o=n(2),i=u(n(3)),a=u(n(0));function u(t){return t&&t.__esModule?t:{default:t}}var f=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),r(e,[{key:"valid",value:function(){return-1!==this.data.search(/^[0-9]{5}$/)}},{key:"encode",value:function(){var t,e=o.EAN5_STRUCTURE[(t=this.data,t.split("").map((function(t){return+t})).reduce((function(t,e,n){return n%2?t+9*e:t+3*e}),0)%10)];return{data:"1011"+(0,i.default)(this.data,e,"01"),text:this.text}}}]),e}(a.default);e.default=f},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),o=n(2),i=a(n(3));function a(t){return t&&t.__esModule?t:{default:t}}var u=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),r(e,[{key:"valid",value:function(){return-1!==this.data.search(/^[0-9]{2}$/)}},{key:"encode",value:function(){var t=o.EAN2_STRUCTURE[parseInt(this.data)%4];return{data:"1011"+(0,i.default)(this.data,t,"01"),text:this.text}}}]),e}(a(n(0)).default);e.default=u},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),o=u(n(3)),i=u(n(0)),a=n(9);function u(t){return t&&t.__esModule?t:{default:t}}function f(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}var c=["XX00000XXX","XX10000XXX","XX20000XXX","XXX00000XX","XXXX00000X","XXXXX00005","XXXXX00006","XXXXX00007","XXXXX00008","XXXXX00009"],s=[["EEEOOO","OOOEEE"],["EEOEOO","OOEOEE"],["EEOOEO","OOEEOE"],["EEOOOE","OOEEEO"],["EOEEOO","OEOOEE"],["EOOEEO","OEEOOE"],["EOOOEE","OEEEOO"],["EOEOEO","OEOEOE"],["EOEOOE","OEOEEO"],["EOOEOE","OEEOEO"]],l=function(t){function e(t,n){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e);var r=f(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));if(r.isValid=!1,-1!==t.search(/^[0-9]{6}$/))r.middleDigits=t,r.upcA=p(t,"0"),r.text=n.text||""+r.upcA[0]+t+r.upcA[r.upcA.length-1],r.isValid=!0;else{if(-1===t.search(/^[01][0-9]{7}$/))return f(r);if(r.middleDigits=t.substring(1,t.length-1),r.upcA=p(r.middleDigits,t[0]),r.upcA[r.upcA.length-1]!==t[t.length-1])return f(r);r.isValid=!0}return r.displayValue=n.displayValue,n.fontSize>10*n.width?r.fontSize=10*n.width:r.fontSize=n.fontSize,r.guardHeight=n.height+r.fontSize/2+n.textMargin,r}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),r(e,[{key:"valid",value:function(){return this.isValid}},{key:"encode",value:function(){return this.options.flat?this.flatEncoding():this.guardedEncoding()}},{key:"flatEncoding",value:function(){var t="";return t+="101",t+=this.encodeMiddleDigits(),{data:t+="010101",text:this.text}}},{key:"guardedEncoding",value:function(){var t=[];return this.displayValue&&t.push({data:"00000000",text:this.text[0],options:{textAlign:"left",fontSize:this.fontSize}}),t.push({data:"101",options:{height:this.guardHeight}}),t.push({data:this.encodeMiddleDigits(),text:this.text.substring(1,7),options:{fontSize:this.fontSize}}),t.push({data:"010101",options:{height:this.guardHeight}}),this.displayValue&&t.push({data:"00000000",text:this.text[7],options:{textAlign:"right",fontSize:this.fontSize}}),t}},{key:"encodeMiddleDigits",value:function(){var t=this.upcA[0],e=this.upcA[this.upcA.length-1],n=s[parseInt(e)][parseInt(t)];return(0,o.default)(this.middleDigits,n)}}]),e}(i.default);function p(t,e){for(var n=parseInt(t[t.length-1]),r=c[n],o="",i=0,u=0;u<r.length;u++){var f=r[u];o+="X"===f?t[i++]:f}return""+(o=""+e+o)+(0,a.checksum)(o)}e.default=l},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.ITF14=e.ITF=void 0;var r=i(n(10)),o=i(n(32));function i(t){return t&&t.__esModule?t:{default:t}}e.ITF=r.default,e.ITF14=o.default},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});e.START_BIN="1010",e.END_BIN="11101",e.BINARIES=["00110","10001","01001","11000","00101","10100","01100","00011","10010","01010"]},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(10),a=(r=i)&&r.__esModule?r:{default:r};var u=function(t){var e=t.substr(0,13).split("").map((function(t){return parseInt(t,10)})).reduce((function(t,e,n){return t+e*(3-n%2*2)}),0);return 10*Math.ceil(e/10)-e},f=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),-1!==t.search(/^[0-9]{13}$/)&&(t+=u(t)),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return-1!==this.data.search(/^[0-9]{14}$/)&&+this.data[13]===u(this.data)}}]),e}(a.default);e.default=f},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.MSI1110=e.MSI1010=e.MSI11=e.MSI10=e.MSI=void 0;var r=f(n(4)),o=f(n(34)),i=f(n(35)),a=f(n(36)),u=f(n(37));function f(t){return t&&t.__esModule?t:{default:t}}e.MSI=r.default,e.MSI10=o.default,e.MSI11=i.default,e.MSI1010=a.default,e.MSI1110=u.default},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=n(4),i=(r=o)&&r.__esModule?r:{default:r},a=n(6);var u=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t+(0,a.mod10)(t),n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),e}(i.default);e.default=u},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=n(4),i=(r=o)&&r.__esModule?r:{default:r},a=n(6);var u=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t+(0,a.mod11)(t),n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),e}(i.default);e.default=u},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=n(4),i=(r=o)&&r.__esModule?r:{default:r},a=n(6);var u=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),t+=(0,a.mod10)(t),t+=(0,a.mod10)(t),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),e}(i.default);e.default=u},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=n(4),i=(r=o)&&r.__esModule?r:{default:r},a=n(6);var u=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),t+=(0,a.mod11)(t),t+=(0,a.mod10)(t),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),e}(i.default);e.default=u},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.pharmacode=void 0;var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(0);var a=function(t){function e(t,n){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e);var r=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return r.number=parseInt(t,10),r}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"encode",value:function(){for(var t=this.number,e="";!isNaN(t)&&0!=t;)t%2==0?(e="11100"+e,t=(t-2)/2):(e="100"+e,t=(t-1)/2);return{data:e=e.slice(0,-2),text:this.text}}},{key:"valid",value:function(){return this.number>=3&&this.number<=131070}}]),e}(((r=i)&&r.__esModule?r:{default:r}).default);e.pharmacode=a},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.codabar=void 0;var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(0);var a=function(t){function e(t,n){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),0===t.search(/^[0-9\-\$\:\.\+\/]+$/)&&(t="A"+t+"A");var r=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t.toUpperCase(),n));return r.text=r.options.text||r.text.replace(/[A-D]/g,""),r}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"valid",value:function(){return-1!==this.data.search(/^[A-D][0-9\-\$\:\.\+\/]+[A-D]$/)}},{key:"encode",value:function(){for(var t=[],e=this.getEncodings(),n=0;n<this.data.length;n++)t.push(e[this.data.charAt(n)]),n!==this.data.length-1&&t.push("0");return{text:this.text,data:t.join("")}}},{key:"getEncodings",value:function(){return{0:"101010011",1:"101011001",2:"101001011",3:"110010101",4:"101101001",5:"110101001",6:"100101011",7:"100101101",8:"100110101",9:"110100101","-":"101001101",$:"101100101",":":"1101011011","/":"1101101011",".":"1101101101","+":"1011011011",A:"1011001001",B:"1001001011",C:"1010010011",D:"1010011001"}}}]),e}(((r=i)&&r.__esModule?r:{default:r}).default);e.codabar=a},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.GenericBarcode=void 0;var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(0);var a=function(t){function e(t,n){return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(e,t),o(e,[{key:"encode",value:function(){return{data:"10101010101010101010101010101010101010101",text:this.text}}},{key:"valid",value:function(){return!0}}]),e}(((r=i)&&r.__esModule?r:{default:r}).default);e.GenericBarcode=a},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(t){var e=[];return function t(n){if(Array.isArray(n))for(var r=0;r<n.length;r++)t(n[r]);else n.text=n.text||"",n.data=n.data||"",e.push(n)}(t),e}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(t){return t.marginTop=t.marginTop||t.margin,t.marginBottom=t.marginBottom||t.margin,t.marginRight=t.marginRight||t.margin,t.marginLeft=t.marginLeft||t.margin,t}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},o=u(n(44)),i=u(n(45)),a=n(14);function u(t){return t&&t.__esModule?t:{default:t}}function f(t){if("string"==typeof t)return function(t){var e=document.querySelectorAll(t);if(0===e.length)return;for(var n=[],r=0;r<e.length;r++)n.push(f(e[r]));return n}(t);if(Array.isArray(t)){for(var e=[],n=0;n<t.length;n++)e.push(f(t[n]));return e}if("undefined"!=typeof HTMLCanvasElement&&t instanceof HTMLImageElement)return u=t,{element:c=document.createElement("canvas"),options:(0,o.default)(u),renderer:i.default.CanvasRenderer,afterRender:function(){u.setAttribute("src",c.toDataURL())}};if(t&&t.nodeName&&"svg"===t.nodeName.toLowerCase()||"undefined"!=typeof SVGElement&&t instanceof SVGElement)return{element:t,options:(0,o.default)(t),renderer:i.default.SVGRenderer};if("undefined"!=typeof HTMLCanvasElement&&t instanceof HTMLCanvasElement)return{element:t,options:(0,o.default)(t),renderer:i.default.CanvasRenderer};if(t&&t.getContext)return{element:t,renderer:i.default.CanvasRenderer};if(t&&"object"===(void 0===t?"undefined":r(t))&&!t.nodeName)return{element:t,renderer:i.default.ObjectRenderer};throw new a.InvalidElementException;var u,c}e.default=f},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=i(n(11)),o=i(n(12));function i(t){return t&&t.__esModule?t:{default:t}}e.default=function(t){var e={};for(var n in o.default)o.default.hasOwnProperty(n)&&(t.hasAttribute("jsbarcode-"+n.toLowerCase())&&(e[n]=t.getAttribute("jsbarcode-"+n.toLowerCase())),t.hasAttribute("data-"+n.toLowerCase())&&(e[n]=t.getAttribute("data-"+n.toLowerCase())));return e.value=t.getAttribute("jsbarcode-value")||t.getAttribute("data-value"),e=(0,r.default)(e)}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=a(n(46)),o=a(n(47)),i=a(n(48));function a(t){return t&&t.__esModule?t:{default:t}}e.default={CanvasRenderer:r.default,SVGRenderer:o.default,ObjectRenderer:i.default}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(7),a=(r=i)&&r.__esModule?r:{default:r},u=n(13);var f=function(){function t(e,n,r){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.canvas=e,this.encodings=n,this.options=r}return o(t,[{key:"render",value:function(){if(!this.canvas.getContext)throw new Error("The browser does not support canvas.");this.prepareCanvas();for(var t=0;t<this.encodings.length;t++){var e=(0,a.default)(this.options,this.encodings[t].options);this.drawCanvasBarcode(e,this.encodings[t]),this.drawCanvasText(e,this.encodings[t]),this.moveCanvasDrawing(this.encodings[t])}this.restoreCanvas()}},{key:"prepareCanvas",value:function(){var t=this.canvas.getContext("2d");t.save(),(0,u.calculateEncodingAttributes)(this.encodings,this.options,t);var e=(0,u.getTotalWidthOfEncodings)(this.encodings),n=(0,u.getMaximumHeightOfEncodings)(this.encodings);this.canvas.width=e+this.options.marginLeft+this.options.marginRight,this.canvas.height=n,t.clearRect(0,0,this.canvas.width,this.canvas.height),this.options.background&&(t.fillStyle=this.options.background,t.fillRect(0,0,this.canvas.width,this.canvas.height)),t.translate(this.options.marginLeft,0)}},{key:"drawCanvasBarcode",value:function(t,e){var n,r=this.canvas.getContext("2d"),o=e.data;n="top"==t.textPosition?t.marginTop+t.fontSize+t.textMargin:t.marginTop,r.fillStyle=t.lineColor;for(var i=0;i<o.length;i++){var a=i*t.width+e.barcodePadding;"1"===o[i]?r.fillRect(a,n,t.width,t.height):o[i]&&r.fillRect(a,n,t.width,t.height*o[i])}}},{key:"drawCanvasText",value:function(t,e){var n,r,o=this.canvas.getContext("2d"),i=t.fontOptions+" "+t.fontSize+"px "+t.font;t.displayValue&&(r="top"==t.textPosition?t.marginTop+t.fontSize-t.textMargin:t.height+t.textMargin+t.marginTop+t.fontSize,o.font=i,"left"==t.textAlign||e.barcodePadding>0?(n=0,o.textAlign="left"):"right"==t.textAlign?(n=e.width-1,o.textAlign="right"):(n=e.width/2,o.textAlign="center"),o.fillText(e.text,n,r))}},{key:"moveCanvasDrawing",value:function(t){this.canvas.getContext("2d").translate(t.width,0)}},{key:"restoreCanvas",value:function(){this.canvas.getContext("2d").restore()}}]),t}();e.default=f},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r,o=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}(),i=n(7),a=(r=i)&&r.__esModule?r:{default:r},u=n(13);var f="http://www.w3.org/2000/svg",c=function(){function t(e,n,r){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.svg=e,this.encodings=n,this.options=r,this.document=r.xmlDocument||document}return o(t,[{key:"render",value:function(){var t=this.options.marginLeft;this.prepareSVG();for(var e=0;e<this.encodings.length;e++){var n=this.encodings[e],r=(0,a.default)(this.options,n.options),o=this.createGroup(t,r.marginTop,this.svg);this.setGroupOptions(o,r),this.drawSvgBarcode(o,r,n),this.drawSVGText(o,r,n),t+=n.width}}},{key:"prepareSVG",value:function(){for(;this.svg.firstChild;)this.svg.removeChild(this.svg.firstChild);(0,u.calculateEncodingAttributes)(this.encodings,this.options);var t=(0,u.getTotalWidthOfEncodings)(this.encodings),e=(0,u.getMaximumHeightOfEncodings)(this.encodings),n=t+this.options.marginLeft+this.options.marginRight;this.setSvgAttributes(n,e),this.options.background&&this.drawRect(0,0,n,e,this.svg).setAttribute("style","fill:"+this.options.background+";")}},{key:"drawSvgBarcode",value:function(t,e,n){var r,o=n.data;r="top"==e.textPosition?e.fontSize+e.textMargin:0;for(var i=0,a=0,u=0;u<o.length;u++)a=u*e.width+n.barcodePadding,"1"===o[u]?i++:i>0&&(this.drawRect(a-e.width*i,r,e.width*i,e.height,t),i=0);i>0&&this.drawRect(a-e.width*(i-1),r,e.width*i,e.height,t)}},{key:"drawSVGText",value:function(t,e,n){var r,o,i=this.document.createElementNS(f,"text");e.displayValue&&(i.setAttribute("style","font:"+e.fontOptions+" "+e.fontSize+"px "+e.font),o="top"==e.textPosition?e.fontSize-e.textMargin:e.height+e.textMargin+e.fontSize,"left"==e.textAlign||n.barcodePadding>0?(r=0,i.setAttribute("text-anchor","start")):"right"==e.textAlign?(r=n.width-1,i.setAttribute("text-anchor","end")):(r=n.width/2,i.setAttribute("text-anchor","middle")),i.setAttribute("x",r),i.setAttribute("y",o),i.appendChild(this.document.createTextNode(n.text)),t.appendChild(i))}},{key:"setSvgAttributes",value:function(t,e){var n=this.svg;n.setAttribute("width",t+"px"),n.setAttribute("height",e+"px"),n.setAttribute("x","0px"),n.setAttribute("y","0px"),n.setAttribute("viewBox","0 0 "+t+" "+e),n.setAttribute("xmlns",f),n.setAttribute("version","1.1"),n.setAttribute("style","transform: translate(0,0)")}},{key:"createGroup",value:function(t,e,n){var r=this.document.createElementNS(f,"g");return r.setAttribute("transform","translate("+t+", "+e+")"),n.appendChild(r),r}},{key:"setGroupOptions",value:function(t,e){t.setAttribute("style","fill:"+e.lineColor+";")}},{key:"drawRect",value:function(t,e,n,r,o){var i=this.document.createElementNS(f,"rect");return i.setAttribute("x",t),i.setAttribute("y",e),i.setAttribute("width",n),i.setAttribute("height",r),o.appendChild(i),i}}]),t}();e.default=c},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}();var o=function(){function t(e,n,r){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.object=e,this.encodings=n,this.options=r}return r(t,[{key:"render",value:function(){this.object.encodings=this.encodings}}]),t}();e.default=o},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}();var o=function(){function t(e){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.api=e}return r(t,[{key:"handleCatch",value:function(t){if("InvalidInputException"!==t.name)throw t;if(this.api._options.valid===this.api._defaults.valid)throw t.message;this.api._options.valid(!1),this.api.render=function(){}}},{key:"wrapBarcodeCall",value:function(t){try{var e=t.apply(void 0,arguments);return this.api._options.valid(!0),e}catch(t){return this.handleCatch(t),this.api}}}]),t}();e.default=o}]);
+</script>
+<script>
+(function() {
+  const inpFormat = document.getElementById('ean-format');
+  const inpVal = document.getElementById('ean-input');
+  const statusEl = document.getElementById('ean-status-msg');
+  const svgEl = document.getElementById('ean-svg');
+  const canvasEl = document.getElementById('ean-canvas');
+  const btnSvg = document.getElementById('btn-dl-ean-svg');
+  const btnPng = document.getElementById('btn-dl-ean-png');
+
+  function calculateEAN13CheckDigit(digits12) {
+    let sum = 0;
+    for (let i = 0; i < 12; i++) {
+      const d = parseInt(digits12[i], 10);
+      sum += (i % 2 === 0) ? d : d * 3;
+    }
+    const remainder = sum % 10;
+    return remainder === 0 ? 0 : 10 - remainder;
+  }
+
+  function renderRetail() {
+    const fmt = inpFormat.value;
+    let val = (inpVal.value || '').replace(/\D/g, '');
+
+    // Auto-calculate check digit if 12 digits provided for EAN-13
+    if (fmt === 'EAN13' && val.length === 12) {
+      const cd = calculateEAN13CheckDigit(val);
+      val = val + cd;
+      inpVal.value = val;
+      statusEl.textContent = '✓ Kontrol basamağı otomatik hesaplandı: ' + cd;
+      statusEl.className = 'mt-1.5 text-xs font-bold text-emerald-700';
+    }
+
+    try {
+      JsBarcode(svgEl, val, {
+        format: fmt,
+        width: 2,
+        height: 100,
+        displayValue: true,
+        font: 'monospace',
+        fontSize: 14,
+        textMargin: 6,
+        margin: 10
+      });
+
+      JsBarcode(canvasEl, val, {
+        format: fmt,
+        width: 4,
+        height: 200,
+        displayValue: true,
+        font: 'monospace',
+        fontSize: 28,
+        textMargin: 12,
+        margin: 20
+      });
+
+      statusEl.textContent = '✓ Kontrol Basamağı Geçerli';
+      statusEl.className = 'mt-1.5 text-xs font-bold text-emerald-700';
+    } catch(e) {
+      statusEl.textContent = '✗ EAN-13 için lütfen 12 veya 13 haneli sayı girin';
+      statusEl.className = 'mt-1.5 text-xs font-bold text-red-600';
+    }
+  }
+
+  inpFormat.addEventListener('change', () => {
+    if (inpFormat.value === 'EAN13') inpVal.value = '4006381333931';
+    else if (inpFormat.value === 'UPC') inpVal.value = '012345678905';
+    else if (inpFormat.value === 'EAN8') inpVal.value = '90311017';
+    renderRetail();
+  });
+
+  inpVal.addEventListener('input', renderRetail);
+
+  document.querySelectorAll('.btn-ean-preset').forEach(b => {
+    b.addEventListener('click', () => {
+      inpFormat.value = b.getAttribute('data-fmt');
+      inpVal.value = b.getAttribute('data-val');
+      renderRetail();
+    });
+  });
+
+  btnSvg.addEventListener('click', () => {
+    const serializer = new XMLSerializer();
+    const source = serializer.serializeToString(svgEl);
+    const blob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+    const a = document.createElement('a');
+    a.download = inpFormat.value + '-' + inpVal.value + '.svg';
+    a.href = URL.createObjectURL(blob);
+    a.click();
+    if (window.showToast) window.showToast('Vektör SVG İndir');
+  });
+
+  btnPng.addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.download = inpFormat.value + '-' + inpVal.value + '.png';
+    a.href = canvasEl.toDataURL('image/png');
+    a.click();
+    if (window.showToast) window.showToast('Yüksek Çözünürlüklü PNG İndir');
+  });
+
+  renderRetail();
+})();
+</script>
+        
+
+    
+    <!-- GlobalCoreHub Native Ad Banner (Neo-Brutalism Style) -->
+    <aside class="my-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 font-bold" aria-label="Sponsored Content">
+      <div class="rounded-xl border-[3px] border-black bg-white dark:bg-zinc-900 p-4 sm:p-6 text-center overflow-hidden shadow-[4px_4px_0px_#000]">
+        <div class="text-[10px] uppercase font-mono tracking-widest text-black dark:text-yellow-300 mb-3 flex items-center justify-center space-x-2">
+          <span>⚡</span>
+          <span>SPONSORLU İÇERİK</span>
+          <span>⚡</span>
+        </div>
+        <div id="container-411eda7150daa05047a0b4f542aa62eb" class="min-h-[100px] flex items-center justify-center"></div>
+        <script async="async" data-cfasync="false" src="https://dischargeconceiteffort.com/411eda7150daa05047a0b4f542aa62eb/invoke.js"></script>
+      </div>
+    </aside>
+    
+  </main>
+
+  <!-- Neo-Brutalist High-Impact Footer -->
+  <footer class="mt-auto border-t-[3px] border-black bg-white dark:bg-zinc-900 pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="w-8 h-8 rounded-lg bg-yellow-300 border-2 border-black flex items-center justify-center font-black shadow-[2px_2px_0px_#000]">⚡</span>
+            <span class="font-black text-lg uppercase">QRBox Studio</span>
+          </div>
+          <p class="text-xs font-medium text-neutral-600 dark:text-neutral-300 max-w-md leading-relaxed mb-4">
+            %100 İstemci Tarafı Gizlilik: Barkod oluşturma ve tarama işlemleri cihazınızın belleğinde gerçekleşir, sunucuya veri gönderilmez.
+          </p>
+          <div class="inline-block px-3 py-1 rounded-lg border-2 border-black bg-pop-green text-xs font-mono font-bold shadow-[2px_2px_0px_#000]">
+            ⚡ Neo-Brutalist High-Octane Architecture
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-black uppercase tracking-wider text-xs mb-3 border-b-2 border-black pb-1"></h4>
+          <ul class="space-y-1.5 text-xs font-bold">
+            
+            <li><a href="/tr/url-qr-code-generator" class="hover:underline text-neutral-700 dark:text-neutral-300">→ URL QR Kod</a></li>
+            
+            <li><a href="/tr/wifi-qr-code-generator" class="hover:underline text-neutral-700 dark:text-neutral-300">→ WiFi QR</a></li>
+            
+            <li><a href="/tr/#tools-grid" class="hover:underline text-black dark:text-white">→ </a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-black uppercase tracking-wider text-xs mb-3 border-b-2 border-black pb-1">Küresel Çok Dilli Ağ Matrisi</h4>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono font-bold">
+            
+            <a href="/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">English</a>
+            
+            <a href="/zh/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Chinese</a>
+            
+            <a href="/es/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Spanish</a>
+            
+            <a href="/pt/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Portuguese</a>
+            
+            <a href="/de/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">German</a>
+            
+            <a href="/fr/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">French</a>
+            
+            <a href="/ja/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Japanese</a>
+            
+            <a href="/ko/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Korean</a>
+            
+            <a href="/it/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Italian</a>
+            
+            <a href="/ru/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Russian</a>
+            
+            <a href="/ar/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Arabic</a>
+            
+            <a href="/id/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Indonesian</a>
+            
+            <a href="/vi/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Vietnamese</a>
+            
+            <a href="/tr/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Turkish</a>
+            
+            <a href="/th/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Thai</a>
+            
+            <a href="/hi/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Hindi</a>
+            
+            <a href="/nl/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Dutch</a>
+            
+            <a href="/pl/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Polish</a>
+            
+            <a href="/sv/ean-upc-barcode-generator" class="px-2 py-1 rounded border border-black bg-neutral-100 hover:bg-yellow-300 transition text-black shadow-[1px_1px_0px_#000]">Swedish</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t-2 border-black flex flex-col sm:flex-row items-center justify-between text-xs font-mono font-bold">
+        <div>
+          &copy; QRBox Studio. 100% Client-Side Execution.
+          
+          <span class="mx-2 opacity-40">|</span>
+          <a href="https://dischargeconceiteffort.com/bs4tah5fhz?key=f031a850339a5c91e7f30d97af3de3b2" target="_blank" rel="sponsored noopener noreferrer" class="text-black dark:text-yellow-300 hover:underline bg-yellow-300 dark:bg-black px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_#000]">⚡ Ortak Çözüm ↗</a>
+          
+        </div>
+        <div class="mt-2 sm:mt-0">19 Küresel Dil · 56 Yerelleştirilmiş Uç Nokta · %100 İstemci Tarafı</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-xl border-2 border-black bg-yellow-300 text-black shadow-[4px_4px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition opacity-0 pointer-events-none transform translate-y-4" title="Başa dön">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <!-- Neo-Brutalism Global Interaction Runtime -->
+  <script>
+  (function() {
+    // 1. Mobile Drawer Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // 2. Tools Dropdown Toggle
+    const dropdownBtn = document.getElementById('tools-dropdown-btn');
+    const dropdownPanel = document.getElementById('tools-dropdown-panel');
+    if (dropdownBtn && dropdownPanel) {
+      dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownPanel.classList.toggle('hidden');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdownPanel.contains(e.target)) dropdownPanel.classList.add('hidden');
+      });
+    }
+
+    // 3. Smooth Back-to-Top
+    const btt = document.getElementById('back-to-top-btn');
+    if (btt) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY > 300;
+        btt.classList.toggle('opacity-0', !scrolled);
+        btt.classList.toggle('pointer-events-none', !scrolled);
+        btt.classList.toggle('translate-y-4', !scrolled);
+      });
+      btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // 4. Global Toast Notification Runtime
+    window.showToast = function(msg) {
+      const toast = document.createElement('div');
+      toast.className = 'fixed bottom-6 right-6 z-50 bg-white border-[3px] border-black text-black text-xs font-mono font-black px-5 py-3 rounded-xl shadow-[5px_5px_0px_#000] flex items-center space-x-2 transition-all duration-200';
+      toast.innerHTML = '<span class="text-amber-500">⚡</span><span>' + msg + '</span>';
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 250);
+      }, 2000);
+    };
+
+    // 5. Smooth Centered Search Focus Runtime with Header Offset
+    window.focusAndCenterSearch = function() {
+      const searchInput = document.getElementById('tool-search');
+      if (searchInput) {
+        const header = document.querySelector('header') || document.querySelector('nav');
+        const headerOffset = (header ? header.offsetHeight : 70) + 24;
+        const elementPosition = searchInput.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+
+        setTimeout(() => {
+          try {
+            searchInput.focus({ preventScroll: true });
+            searchInput.select();
+          } catch(e) {
+            searchInput.focus();
+          }
+          searchInput.classList.add('search-highlight-pulse');
+          setTimeout(() => searchInput.classList.remove('search-highlight-pulse'), 1200);
+        }, 300);
+        return true;
+      } else {
+        window.location.href = '/tr/?focus_search=1#tool-search';
+        return false;
+      }
+    };
+
+    // Intercept clicks on top nav search & mobile search
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('#nav-search-btn, .mobile-search-link, a[href*="#tool-search"]');
+      if (btn && document.getElementById('tool-search')) {
+        e.preventDefault();
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
+        if (history.replaceState) history.replaceState(null, '', '#tool-search');
+        window.focusAndCenterSearch();
+      }
+    });
+
+    // Auto focus when loading with #tool-search or focus_search=1
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const shouldFocus = window.location.hash === '#tool-search' || params.get('focus_search') === '1' || params.has('q');
+      if (shouldFocus && document.getElementById('tool-search')) {
+        setTimeout(window.focusAndCenterSearch, 250);
+      }
+    });
+
+    // Global Keyboard Shortcuts (Ctrl+K or /)
+    document.addEventListener('keydown', (e) => {
+      const isSearchKey = (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) ||
+                          (e.key.toLowerCase() === 'k' && (e.ctrlKey || e.metaKey));
+      if (isSearchKey) {
+        e.preventDefault();
+        window.focusAndCenterSearch();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
